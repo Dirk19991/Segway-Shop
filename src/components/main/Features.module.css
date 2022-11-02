@@ -1,0 +1,42 @@
+.wrapper {
+  background: var(--WHITE);
+  display: flex;
+  justify-content: center;
+  height: 296px;
+}
+
+.features {
+  width: 1000px;
+}
+
+.featuresList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 235px;
+  color: var(--GREY_2);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.highlighted {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 235px;
+  color: var(--WHITE);
+  background-color: var(--BLUE);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.highlightedIcon {
+  filter: brightness(0) invert(1);
+}
