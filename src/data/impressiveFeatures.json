@@ -1,0 +1,42 @@
+[
+  {
+    "header": "10\"",
+    "description": "Pneumatic Tires",
+    "image": "pneumatic_tires"
+  },
+  {
+    "header": "LED",
+    "description": "Front LED Lights",
+    "image": "lightbulb"
+  },
+  {
+    "header": "18.6 mph",
+    "description": "Max Speed",
+    "image": "max_speed"
+  },
+  {
+    "header": "40.4 Miles",
+    "description": "Max Range",
+    "image": "max_range"
+  },
+  {
+    "header": "20%",
+    "description": "Hill Grade",
+    "image": "hill_grade"
+  },
+  {
+    "header": "IPX5",
+    "description": "Water-resistant",
+    "image": "water_resistant"
+  },
+  {
+    "header": "6H",
+    "description": "Fast Charging",
+    "image": "fast_charging"
+  },
+  {
+    "header": "551Wh",
+    "description": "Battery",
+    "image": "battery"
+  }
+]

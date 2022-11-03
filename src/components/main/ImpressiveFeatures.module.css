@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  height: 700px;
+}
+
+.impressiveFeatures {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.mainHeader {
+  color: var(--GREY);
+  font-size: 4.1rem;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.image {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.featuresBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 0 80px;
+}
+
+.feature {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 3rem;
+  color: var(--BLUE);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: var(--GREY_2);
+}
