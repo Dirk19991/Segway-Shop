@@ -4,6 +4,8 @@ import Features from './Features';
 import Accessories from './Accessories';
 import BigImage from './BigImage';
 import ImpressiveFeatures from './ImpressiveFeatures';
+import SmartPhoneControl from './SmartPhoneControl';
+import OtherModels from './OtherModels';
 
 function Main() {
   return (
@@ -14,6 +16,8 @@ function Main() {
       <Accessories />
       <BigImage />
       <ImpressiveFeatures />
+      <SmartPhoneControl />
+      <OtherModels />
     </>
   );
 }

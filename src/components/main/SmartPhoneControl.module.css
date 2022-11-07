@@ -1,0 +1,73 @@
+.wrapper {
+  height: 800px;
+  color: var(--WHITE);
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#ffffff, #eeeeee);
+}
+
+.smartPhoneControl {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 4.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--GREY);
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: var(--GREY);
+  text-align: center;
+  width: 850px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.iconsDownload {
+  width: 400px;
+  margin-top: 55px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 25px;
+}
+
+.image {
+  width: 400px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-image: url('../../assets/images/polygon.svg');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentIcon {
+  transform: translateY(-25%);
+}
+
+.iconDescription {
+  color: #cccccc;
+  width: 100px;
+  text-align: center;
+  font-size: 1.1rem;
+}

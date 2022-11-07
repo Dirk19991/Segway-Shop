@@ -48,6 +48,12 @@ function FeatureText() {
     if (highlightedFeature === 'warranty') {
       return classes.one;
     }
+    if (highlightedFeature === 'support') {
+      return classes.support;
+    }
+    if (highlightedFeature === 'charge') {
+      return classes.charge;
+    }
   }
 
   return (
@@ -60,8 +66,12 @@ function FeatureText() {
           {content[highlightedFeature].text}
         </div>
       </div>
-      <div className={getIconStyles()}>
-        <img src={content[highlightedFeature].icon} alt='icon' />
+      <div>
+        <img
+          className={getIconStyles()}
+          src={content[highlightedFeature].icon}
+          alt='icon'
+        />
       </div>
     </div>
   );

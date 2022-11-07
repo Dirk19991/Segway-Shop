@@ -1,6 +1,5 @@
 import classes from './Accessories.module.css';
 import accessories from '../../data/accessories.json';
-// import { accessoriesImages } from '../../assets/images/accessories';
 
 function Accessories() {
   return (

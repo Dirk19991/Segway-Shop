@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "KS E22",
+    "price": "$899.99",
+    "image": "KS_E22"
+  },
+  {
+    "id": 2,
+    "name": "KS ES1l",
+    "price": "$389.99",
+    "image": "KS_ES1L"
+  },
+  {
+    "id": 3,
+    "name": "KS Air t15",
+    "price": "$819.99",
+    "image": "KS_AIR_T15"
+  },
+  {
+    "id": 4,
+    "name": "KS F30",
+    "price": "$649.99",
+    "image": "KS_F30"
+  },
+  {
+    "id": 5,
+    "name": "KS E45",
+    "price": "$859.99",
+    "image": "KS_E45"
+  },
+  {
+    "id": 6,
+    "name": "KS MAX",
+    "price": "$949.99",
+    "image": "KS_MAX"
+  },
+  {
+    "id": 7,
+    "name": "MKS MAX",
+    "price": "$949.99",
+    "image": "MKS_MAX"
+  }
+]

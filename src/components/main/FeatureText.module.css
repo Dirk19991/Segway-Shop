@@ -24,9 +24,52 @@
 }
 
 .map {
-  transform: translateY(20px);
+  padding-top: 20px;
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
 }
 
 .one {
-  transform: scale(1.1) translateX(-4px) translateY(2px);
+  padding-left: -4px;
+  padding-top: 2px;
+  animation-name: fadeInOne;
+  animation-duration: 0.6s;
+  transform: scale(1.1);
+}
+
+.charge {
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+}
+
+.support {
+  animation-name: fadeInSupport;
+  animation-duration: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInSupport {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInOne {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
