@@ -4,7 +4,7 @@ import accessories from '../../data/accessories.json';
 function Accessories() {
   return (
     <div className={classes.wrapper}>
-      <div className={classes.accessories}>
+      <div id='accessories' className={classes.accessories}>
         {accessories.map((elem) => {
           return (
             <div key={elem.id} className={classes.accessory}>

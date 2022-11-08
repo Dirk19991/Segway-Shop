@@ -10,7 +10,7 @@ import training from '../../assets/images/smartphone/training.svg';
 function SmartPhoneControl() {
   return (
     <div className={classes.wrapper}>
-      <div className={classes.smartPhoneControl}>
+      <div id='app' className={classes.smartPhoneControl}>
         <div className={classes.header}>Control from your smartphone</div>
         <div className={classes.description}>
           You can easily control your Segway electric scooter with your

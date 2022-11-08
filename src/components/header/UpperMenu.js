@@ -1,17 +1,40 @@
 import cart from '../../assets/icons/cart.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import classes from './UpperMenu.module.css';
+import { Link } from 'react-scroll';
 
 function UpperMenu() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.upperMenu}>
-        <ul>
-          <li>REVIEWS</li>
-          <li>SHIPPING AND PAYMENT</li>
-          <li>WHOLESALE</li>
-          <li>BLOG</li>
-          <li>CONTACTS</li>
+        <ul className={classes.links}>
+          <li>
+            <Link to='features' spy={true} smooth={true}>
+              FEATURES
+            </Link>
+          </li>
+          <li>
+            <Link to='accessories' spy={true} smooth={true}>
+              ACCESSORIES
+            </Link>
+          </li>
+          <li>
+            {' '}
+            <Link to='app' spy={true} smooth={true}>
+              APP
+            </Link>
+          </li>
+          <li>
+            <Link to='otherModels' spy={true} smooth={true}>
+              OTHER MODELS
+            </Link>
+          </li>
+          <li>
+            {' '}
+            <Link to='contacts' spy={true} smooth={true}>
+              CONTACTS
+            </Link>
+          </li>
         </ul>
 
         <ul>

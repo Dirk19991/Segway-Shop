@@ -4,7 +4,7 @@ import segway from '../../assets/icons/segway.svg';
 function Footer() {
   return (
     <div className={classes.wrapper}>
-      <div className={classes.footer}>
+      <div id='contacts' className={classes.footer}>
         <div className={classes.logo}>
           <img src={segway} alt='segway' />
         </div>

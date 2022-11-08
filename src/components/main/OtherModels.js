@@ -21,7 +21,7 @@ function OtherModels() {
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.otherModels}>
+      <div id='otherModels' className={classes.otherModels}>
         <div className={classes.header}>Other models</div>
         <div className={classes.subheader}>
           Check out the entire line of Segway scooters

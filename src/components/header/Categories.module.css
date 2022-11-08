@@ -34,10 +34,15 @@
   height: 70px;
   width: 70px;
   object-fit: contain;
+  cursor: pointer;
 }
 
-.accessories > img {
+.accessoriesImage {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
   transform: translateY(15px);
+  cursor: pointer;
 }
 
 .maxWhite > img {

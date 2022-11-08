@@ -26,4 +26,9 @@
 .upperMenu > ul > li > img {
   display: flex;
   align-items: flex-end;
+  cursor: pointer;
+}
+
+.links {
+  cursor: pointer;
 }

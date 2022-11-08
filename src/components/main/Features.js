@@ -21,7 +21,7 @@ function Features() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.features}>
-        <div className={classes.featuresList}>
+        <div id='features' className={classes.featuresList}>
           <div
             onClick={() => dispatch(changeHighlight('delivery'))}
             className={
