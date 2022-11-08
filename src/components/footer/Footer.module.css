@@ -1,0 +1,26 @@
+.wrapper {
+  background-color: var(--GREY);
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.logo {
+  filter: brightness(0) invert(1);
+}
+
+.footer {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--WHITE);
+  font-size: 1.1rem;
+  gap: 45px;
+}

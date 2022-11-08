@@ -11,6 +11,9 @@ function OtherModels() {
     event.preventDefault();
     if (input === 10) {
       setSent(true);
+      setTimeout(() => {
+        setSent(false);
+      }, 1500);
     } else {
       setSent(false);
     }
@@ -45,7 +48,7 @@ function OtherModels() {
             </div>
             <form className={classes.form} onSubmit={handleSubmit}>
               <InputMask setInput={setInput} />
-              {sent ? (
+              {sent && input === 10 ? (
                 <button className={classes.sentButton}>Sent!</button>
               ) : (
                 <button className={classes.button}>Send</button>
