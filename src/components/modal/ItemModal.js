@@ -3,8 +3,9 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleModal } from '../../store/modalSlice';
 
 const style = {
   position: 'absolute',
@@ -18,29 +19,29 @@ const style = {
   p: 4,
 };
 
-export default function ItemModal({
-  open,
-  setOpen,
-  handleOpen,
-  handleClose,
-  elem,
-}) {
+export default function ItemModal() {
+  const open = useSelector((state) => state.modal.open);
+  const chosenItem = useSelector((state) => state.modal.chosenItem);
+  const dispatch = useDispatch();
+
+  console.log(chosenItem);
   return (
     <div>
       <Modal
         aria-labelledby='transition-modal-title'
         aria-describedby='transition-modal-description'
         open={open}
-        onClose={handleClose}
+        onClose={() => dispatch(toggleModal(false))}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
-          style: { backgroundColor: 'rgba(0,0,0, 0.07)' },
-        }}>
+          style: { backgroundColor: 'rgba(0,0,0, 0.5)' },
+        }}
+      >
         <Fade in={open}>
           <Box sx={style}>
             <Typography id='transition-modal-title' variant='h6' component='h2'>
-              {elem}
+              {chosenItem.name}
             </Typography>
             <Typography id='transition-modal-description' sx={{ mt: 2 }}>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
