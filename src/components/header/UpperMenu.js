@@ -1,7 +1,8 @@
 import cart from '../../assets/icons/cart.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import classes from './UpperMenu.module.css';
-import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function UpperMenu() {
   return (
@@ -9,38 +10,39 @@ function UpperMenu() {
       <div className={classes.upperMenu}>
         <ul className={classes.links}>
           <li>
-            <Link to='features' spy={true} smooth={true}>
+            <RouterLink className={classes.routerLink} to='/'>
+              HOME
+            </RouterLink>
+          </li>
+          <li>
+            <HashLink className={classes.routerLink} smooth to='/#features'>
               FEATURES
-            </Link>
+            </HashLink>
           </li>
           <li>
-            <Link to='accessories' spy={true} smooth={true}>
+            <HashLink className={classes.routerLink} smooth to='/#accessories'>
               ACCESSORIES
-            </Link>
+            </HashLink>
           </li>
           <li>
-            {' '}
-            <Link to='app' spy={true} smooth={true}>
+            <HashLink className={classes.routerLink} smooth to='/#app'>
               APP
-            </Link>
+            </HashLink>
           </li>
           <li>
-            <Link to='otherModels' spy={true} smooth={true}>
-              OTHER MODELS
-            </Link>
-          </li>
-          <li>
-            {' '}
-            <Link to='contacts' spy={true} smooth={true}>
+            <HashLink className={classes.routerLink} smooth to='/#contacts'>
               CONTACTS
-            </Link>
+            </HashLink>
           </li>
         </ul>
 
         <ul>
-          <li>
-            <img className={classes.cart} src={cart} alt='cart'></img>
-          </li>
+          <RouterLink to='cart'>
+            <li>
+              <img className={classes.cart} src={cart} alt='cart'></img>
+            </li>
+          </RouterLink>
+
           <li>
             <img className={classes.cart} src={instagram} alt='instagram'></img>
           </li>

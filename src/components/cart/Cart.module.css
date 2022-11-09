@@ -1,0 +1,36 @@
+.wrapper {
+  background: linear-gradient(#eeeeee, #ffffff);
+  display: flex;
+  justify-content: center;
+  height: 800px;
+}
+
+.cart {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: var(--GREY);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.cartGrid {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item > div {
+  width: 100px;
+}

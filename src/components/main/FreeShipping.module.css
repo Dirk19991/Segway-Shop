@@ -1,0 +1,12 @@
+.wrapper {
+  background-color: var(--BLUE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.text {
+  color: var(--WHITE);
+  font-size: 1.5rem;
+}

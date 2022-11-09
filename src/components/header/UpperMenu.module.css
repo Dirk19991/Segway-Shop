@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.upperMenu > ul > li > img {
+.cart {
   display: flex;
   align-items: flex-end;
   cursor: pointer;
@@ -31,4 +31,9 @@
 
 .links {
   cursor: pointer;
+}
+
+.routerLink {
+  color: var(--WHITE);
+  text-decoration: none;
 }

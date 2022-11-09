@@ -1,0 +1,50 @@
+.image {
+  min-height: 300px;
+  justify-self: center;
+  object-fit: contain;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: var(--GREY);
+  font-weight: 700;
+}
+
+.characteristics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.characteristicsNames {
+  font-size: 1.5rem;
+  color: var(--BLUE);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.characteristicsValues {
+  font-size: 1.5rem;
+  color: var(--GREY);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 129px;
+  height: 42px;
+  border: 2px solid #c6c6c6;
+  background-color: var(--WHITE);
+  color: #c6c6c6;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 20px;
+}

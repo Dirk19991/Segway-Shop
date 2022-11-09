@@ -1,15 +1,132 @@
 [
-  { "id": 1, "name": "KS E22", "image": "KS_E22" },
-  { "id": 2, "name": "KS ES1L", "image": "KS_ES1L" },
-  { "id": 3, "name": "KS Air T15", "image": "KS_Air_T15" },
-  { "id": 4, "name": "KS F30", "image": "KS_F30" },
-  { "id": 5, "name": "KS E45", "image": "KS_E45" },
-  { "id": 6, "name": "KS MAX", "image": "KS_MAX_Black" },
-  { "id": 7, "name": "KS MAX", "image": "KS_MAX_White" },
-  { "id": 8, "name": "KS ES2", "image": "KS_ES2" },
-  { "id": 9, "name": "KS ES3", "image": "KS_ES3" },
-  { "id": 10, "name": "EKS ZING E8", "image": "EKS_ZING_E8" },
-  { "id": 11, "name": "EKS ZING E10", "image": "EKS_ZING_E10" },
-  { "id": 12, "name": "EKS ZING E12", "image": "EKS_ZING_E12" },
-  { "id": 13, "name": "KS ES4", "image": "KS_ES4" }
+  {
+    "id": 1,
+    "name": "KS E22",
+    "image": "KS_E22",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "35km",
+    "battery": "6000 mAh",
+    "weight": "11kg",
+    "charge": "3 hours"
+  },
+  {
+    "id": 2,
+    "name": "KS ES1L",
+    "image": "KS_ES1L",
+    "maxSpeed": "20 km/h",
+    "maxDistance": "30km",
+    "battery": "5100 mAh",
+    "weight": "10kg",
+    "charge": "3 hours"
+  },
+  {
+    "id": 3,
+    "name": "KS Air T15",
+    "image": "KS_Air_T15",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "35km",
+    "battery": "6000 mAh",
+    "weight": "11kg",
+    "charge": "4 hours"
+  },
+  {
+    "id": 4,
+    "name": "KS F30",
+    "image": "KS_F30",
+    "maxSpeed": "30 km/h",
+    "maxDistance": "20km",
+    "battery": "7000 mAh",
+    "weight": "12kg",
+    "charge": "5.5 hours"
+  },
+  {
+    "id": 5,
+    "name": "KS E45",
+    "image": "KS_E45",
+    "maxSpeed": "20 km/h",
+    "maxDistance": "40km",
+    "battery": "5500 mAh",
+    "weight": "10kg",
+    "charge": "3 hours"
+  },
+  {
+    "id": 6,
+    "name": "KS MAX",
+    "image": "KS_MAX_Black",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "60km",
+    "battery": "10100 mAh",
+    "weight": "15kg",
+    "charge": "6 hours"
+  },
+  {
+    "id": 7,
+    "name": "KS MAX",
+    "image": "KS_MAX_White",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "60km",
+    "battery": "10100 mAh",
+    "weight": "15kg",
+    "charge": "6 hours"
+  },
+  {
+    "id": 8,
+    "name": "KS ES2",
+    "image": "KS_ES2",
+    "maxSpeed": "35 km/h",
+    "maxDistance": "30km",
+    "battery": "6500 mAh",
+    "weight": "9kg",
+    "charge": "3.5 hours"
+  },
+  {
+    "id": 9,
+    "name": "KS ES3",
+    "image": "KS_ES3",
+    "maxSpeed": "20 km/h",
+    "maxDistance": "25km",
+    "battery": "5000 mAh",
+    "weight": "10kg",
+    "charge": "4 hours"
+  },
+  {
+    "id": 10,
+    "name": "EKS ZING E8",
+    "image": "EKS_ZING_E8",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "25km",
+    "battery": "7000 mAh",
+    "weight": "12kg",
+    "charge": "4 hours"
+  },
+  {
+    "id": 11,
+    "name": "EKS ZING E10",
+    "image": "EKS_ZING_E10",
+    "maxSpeed": "30 km/h",
+    "maxDistance": "30km",
+    "battery": "7000 mAh",
+    "weight": "12kg",
+    "charge": "2.5 hours"
+  },
+  {
+    "id": 12,
+    "name": "EKS ZING E12",
+    "image": "EKS_ZING_E12",
+    "maxSpeed": "30 km/h",
+    "maxDistance": "35km",
+    "battery": "4500 mAh",
+    "weight": "13kg",
+    "charge": "4.5 hours"
+  },
+  {
+    "id": 13,
+    "name": "KS ES4",
+    "image": "KS_ES4",
+    "maxSpeed": "20 km/h",
+    "maxDistance": "40km",
+    "battery": "4500 mAh",
+    "weight": "10kg",
+    "charge": "3 hours"
+  }
 ]

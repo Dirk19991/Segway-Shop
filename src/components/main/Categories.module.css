@@ -1,0 +1,50 @@
+.wrapper {
+  height: 261px;
+  background-color: var(--GREY);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-end;
+  row-gap: 35px;
+}
+
+.item {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--WHITE);
+  opacity: 0.4;
+}
+
+.item > div > img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.accessoriesImage {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  transform: translateY(15px);
+  cursor: pointer;
+}
+
+.maxWhite > img {
+  transform: scale(1.3);
+}

@@ -3,9 +3,10 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Typography from '@mui/material/Typography';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from '../../store/modalSlice';
+import classes from './ItemModal.module.css';
+import { addToCart } from '../../store/cartSlice';
 
 const style = {
   position: 'absolute',
@@ -16,7 +17,12 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 4,
-  p: 4,
+  p: 2,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '10px',
 };
 
 export default function ItemModal() {
@@ -24,7 +30,6 @@ export default function ItemModal() {
   const chosenItem = useSelector((state) => state.modal.chosenItem);
   const dispatch = useDispatch();
 
-  console.log(chosenItem);
   return (
     <div>
       <Modal
@@ -40,12 +45,35 @@ export default function ItemModal() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id='transition-modal-title' variant='h6' component='h2'>
-              {chosenItem.name}
-            </Typography>
-            <Typography id='transition-modal-description' sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <div className={classes.image}>
+              <img
+                alt={chosenItem.image}
+                src={require(`../../assets/images/scootersHD/${chosenItem.image}.png`)}
+              ></img>
+            </div>
+            <div className={classes.name}>{chosenItem.name}</div>
+            <div className={classes.characteristics}>
+              <div className={classes.characteristicsNames}>
+                <div>Max Speed</div>
+                <div>Max Distance</div>
+                <div>Battery Capacity</div>
+                <div>Weight</div>
+                <div>Charge Time</div>
+              </div>
+              <div className={classes.characteristicsValues}>
+                <div>{chosenItem.maxSpeed}</div>
+                <div>{chosenItem.maxDistance}</div>
+                <div>{chosenItem.battery}</div>
+                <div>{chosenItem.weight}</div>
+                <div>{chosenItem.charge}</div>
+              </div>
+            </div>
+            <button
+              onClick={() => dispatch(addToCart(chosenItem))}
+              className={classes.button}
+            >
+              Add to cart
+            </button>
           </Box>
         </Fade>
       </Modal>
