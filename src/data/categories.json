@@ -7,7 +7,8 @@
     "maxDistance": "35km",
     "battery": "6000 mAh",
     "weight": "11kg",
-    "charge": "3 hours"
+    "charge": "3 hours",
+    "price": "$249.99"
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "maxDistance": "30km",
     "battery": "5100 mAh",
     "weight": "10kg",
-    "charge": "3 hours"
+    "charge": "3 hours",
+    "price": "$239.99"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "maxDistance": "35km",
     "battery": "6000 mAh",
     "weight": "11kg",
-    "charge": "4 hours"
+    "charge": "4 hours",
+    "price": "$269.99"
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "maxDistance": "20km",
     "battery": "7000 mAh",
     "weight": "12kg",
-    "charge": "5.5 hours"
+    "charge": "5.5 hours",
+    "price": "$299.99"
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "maxDistance": "40km",
     "battery": "5500 mAh",
     "weight": "10kg",
-    "charge": "3 hours"
+    "charge": "3 hours",
+    "price": "$349.99"
   },
   {
     "id": 6,
@@ -57,7 +62,8 @@
     "maxDistance": "60km",
     "battery": "10100 mAh",
     "weight": "15kg",
-    "charge": "6 hours"
+    "charge": "6 hours",
+    "price": "$399.99"
   },
   {
     "id": 7,
@@ -67,7 +73,8 @@
     "maxDistance": "60km",
     "battery": "10100 mAh",
     "weight": "15kg",
-    "charge": "6 hours"
+    "charge": "6 hours",
+    "price": "$399.99"
   },
   {
     "id": 8,
@@ -77,7 +84,8 @@
     "maxDistance": "30km",
     "battery": "6500 mAh",
     "weight": "9kg",
-    "charge": "3.5 hours"
+    "charge": "3.5 hours",
+    "price": "$239.99"
   },
   {
     "id": 9,
@@ -87,7 +95,8 @@
     "maxDistance": "25km",
     "battery": "5000 mAh",
     "weight": "10kg",
-    "charge": "4 hours"
+    "charge": "4 hours",
+    "price": "$259.99"
   },
   {
     "id": 10,
@@ -97,7 +106,8 @@
     "maxDistance": "25km",
     "battery": "7000 mAh",
     "weight": "12kg",
-    "charge": "4 hours"
+    "charge": "4 hours",
+    "price": "$319.99"
   },
   {
     "id": 11,
@@ -107,7 +117,8 @@
     "maxDistance": "30km",
     "battery": "7000 mAh",
     "weight": "12kg",
-    "charge": "2.5 hours"
+    "charge": "2.5 hours",
+    "price": "$239.99"
   },
   {
     "id": 12,
@@ -117,7 +128,8 @@
     "maxDistance": "35km",
     "battery": "4500 mAh",
     "weight": "13kg",
-    "charge": "4.5 hours"
+    "charge": "4.5 hours",
+    "price": "$199.99"
   },
   {
     "id": 13,
@@ -127,6 +139,7 @@
     "maxDistance": "40km",
     "battery": "4500 mAh",
     "weight": "10kg",
-    "charge": "3 hours"
+    "charge": "3 hours",
+    "price": "$209.99"
   }
 ]

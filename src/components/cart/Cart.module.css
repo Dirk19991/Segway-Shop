@@ -2,7 +2,7 @@
   background: linear-gradient(#eeeeee, #ffffff);
   display: flex;
   justify-content: center;
-  height: 800px;
+  min-height: 1200px;
 }
 
 .cart {
@@ -23,14 +23,54 @@
 .cartGrid {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  align-items: space-between;
+  row-gap: 40px;
+  width: 1000px;
+  font-size: 1.5rem;
+  margin-top: 40px;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  background-color: var(--WHITE);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .item > div {
-  width: 100px;
+  width: 150px;
+}
+
+.image > img {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  height: 20px;
+  border: 1px solid #c6c6c6;
+  background-color: var(--WHITE);
+
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  color: var(--GREY);
+  font-size: 1.5rem;
+}
+
+.minus:hover,
+.plus:hover {
+  background-color: rgba(211, 211, 211, 0.351);
+  border-radius: 5px;
+  cursor: pointer;
 }

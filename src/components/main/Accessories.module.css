@@ -97,3 +97,17 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 129px;
+  height: 42px;
+  border: 2px solid #c6c6c6;
+  background-color: var(--WHITE);
+  color: #c6c6c6;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}

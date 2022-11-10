@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from '../../store/modalSlice';
 import classes from './ItemModal.module.css';
 import { addToCart } from '../../store/cartSlice';
+import PlusMinusButton from '../utitlities/PlusMinusButton';
 
 const style = {
   position: 'absolute',
@@ -28,7 +29,10 @@ const style = {
 export default function ItemModal() {
   const open = useSelector((state) => state.modal.open);
   const chosenItem = useSelector((state) => state.modal.chosenItem);
+  console.log(chosenItem);
   const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
 
   return (
     <div>
@@ -41,15 +45,13 @@ export default function ItemModal() {
         BackdropComponent={Backdrop}
         BackdropProps={{
           style: { backgroundColor: 'rgba(0,0,0, 0.5)' },
-        }}
-      >
+        }}>
         <Fade in={open}>
           <Box sx={style}>
             <div className={classes.image}>
               <img
                 alt={chosenItem.image}
-                src={require(`../../assets/images/scootersHD/${chosenItem.image}.png`)}
-              ></img>
+                src={require(`../../assets/images/scootersHD/${chosenItem.image}.png`)}></img>
             </div>
             <div className={classes.name}>{chosenItem.name}</div>
             <div className={classes.characteristics}>
@@ -59,6 +61,7 @@ export default function ItemModal() {
                 <div>Battery Capacity</div>
                 <div>Weight</div>
                 <div>Charge Time</div>
+                <div>Price</div>
               </div>
               <div className={classes.characteristicsValues}>
                 <div>{chosenItem.maxSpeed}</div>
@@ -66,14 +69,23 @@ export default function ItemModal() {
                 <div>{chosenItem.battery}</div>
                 <div>{chosenItem.weight}</div>
                 <div>{chosenItem.charge}</div>
+                <div>{chosenItem.price}</div>
               </div>
             </div>
-            <button
-              onClick={() => dispatch(addToCart(chosenItem))}
-              className={classes.button}
-            >
-              Add to cart
-            </button>
+
+            {cart.cart.find((item) => item.id === chosenItem.id)?.quantity >
+            0 ? (
+              <PlusMinusButton
+                marginTop='24px'
+                elem={cart.cart.find((item) => item.id === chosenItem.id)}
+              />
+            ) : (
+              <button
+                onClick={() => dispatch(addToCart(chosenItem))}
+                className={classes.button}>
+                Add to cart
+              </button>
+            )}
           </Box>
         </Fade>
       </Modal>

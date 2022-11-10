@@ -2,6 +2,9 @@ import classes from './OtherModels.module.css';
 import otherModels from '../../data/otherModels.json';
 import { InputMask } from './InputMask';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../../store/cartSlice';
+import PlusMinusButton from '../utitlities/PlusMinusButton';
 
 function OtherModels() {
   const [input, setInput] = useState(0);
@@ -19,10 +22,14 @@ function OtherModels() {
     }
   }
 
+  const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
+
   return (
     <div className={classes.wrapper}>
       <div id='otherModels' className={classes.otherModels}>
-        <div className={classes.header}>Other models</div>
+        <div className={classes.header}>Popular models</div>
         <div className={classes.subheader}>
           Check out the entire line of Segway scooters
         </div>
@@ -37,7 +44,18 @@ function OtherModels() {
                 </div>
                 <div className={classes.modelHeader}>{elem.name}</div>
                 <div className={classes.price}>{elem.price}</div>
-                <button className={classes.button}>Add to cart</button>
+
+                {cart.cart.find((item) => item.id === elem.id)?.quantity > 0 ? (
+                  <PlusMinusButton
+                    elem={cart.cart.find((item) => item.id === elem.id)}
+                  />
+                ) : (
+                  <button
+                    onClick={() => dispatch(addToCart(elem))}
+                    className={classes.button}>
+                    Add to cart
+                  </button>
+                )}
               </div>
             );
           })}

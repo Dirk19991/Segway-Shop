@@ -2,43 +2,78 @@
   {
     "id": 1,
     "name": "KS E22",
-    "price": "$899.99",
-    "image": "KS_E22"
+    "image": "KS_E22",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "35km",
+    "battery": "6000 mAh",
+    "weight": "11kg",
+    "charge": "3 hours",
+    "price": "$249.99"
   },
   {
     "id": 2,
-    "name": "KS ES1l",
-    "price": "$389.99",
-    "image": "KS_ES1L"
+    "name": "KS ES1L",
+    "image": "KS_ES1L",
+    "maxSpeed": "20 km/h",
+    "maxDistance": "30km",
+    "battery": "5100 mAh",
+    "weight": "10kg",
+    "charge": "3 hours",
+    "price": "$239.99"
   },
   {
     "id": 3,
-    "name": "KS Air t15",
-    "price": "$819.99",
-    "image": "KS_AIR_T15"
+    "name": "KS Air T15",
+    "image": "KS_Air_T15",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "35km",
+    "battery": "6000 mAh",
+    "weight": "11kg",
+    "charge": "4 hours",
+    "price": "$269.99"
   },
   {
     "id": 4,
     "name": "KS F30",
-    "price": "$649.99",
-    "image": "KS_F30"
+    "image": "KS_F30",
+    "maxSpeed": "30 km/h",
+    "maxDistance": "20km",
+    "battery": "7000 mAh",
+    "weight": "12kg",
+    "charge": "5.5 hours",
+    "price": "$299.99"
   },
   {
     "id": 5,
     "name": "KS E45",
-    "price": "$859.99",
-    "image": "KS_E45"
+    "image": "KS_E45",
+    "maxSpeed": "20 km/h",
+    "maxDistance": "40km",
+    "battery": "5500 mAh",
+    "weight": "10kg",
+    "charge": "3 hours",
+    "price": "$349.99"
   },
   {
     "id": 6,
     "name": "KS MAX",
-    "price": "$949.99",
-    "image": "KS_MAX"
+    "image": "KS_MAX_Black",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "60km",
+    "battery": "10100 mAh",
+    "weight": "15kg",
+    "charge": "6 hours",
+    "price": "$399.99"
   },
   {
     "id": 7,
-    "name": "MKS MAX",
-    "price": "$949.99",
-    "image": "MKS_MAX"
+    "name": "KS MAX",
+    "image": "KS_MAX_White",
+    "maxSpeed": "25 km/h",
+    "maxDistance": "60km",
+    "battery": "10100 mAh",
+    "weight": "15kg",
+    "charge": "6 hours",
+    "price": "$399.99"
   }
 ]
