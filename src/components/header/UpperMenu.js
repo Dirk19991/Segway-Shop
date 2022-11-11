@@ -3,8 +3,13 @@ import instagram from '../../assets/icons/instagram.svg';
 import classes from './UpperMenu.module.css';
 import { Link as RouterLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useSelector } from 'react-redux';
 
 function UpperMenu() {
+  const numberOfItems = useSelector((state) =>
+    state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
+  );
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.upperMenu}>
@@ -37,14 +42,20 @@ function UpperMenu() {
         </ul>
 
         <ul>
-          <RouterLink to='cart'>
-            <li>
-              <img className={classes.cart} src={cart} alt='cart'></img>
-            </li>
-          </RouterLink>
+          <li>
+            <RouterLink
+              className={classes.cart}
+              data-number={numberOfItems}
+              to='cart'
+            >
+              <img src={cart} alt='cart'></img>
+            </RouterLink>
+          </li>
 
           <li>
-            <img className={classes.cart} src={instagram} alt='instagram'></img>
+            <a className={classes.instagram} href='http://instagram.com'>
+              <img src={instagram} alt='instagram'></img>
+            </a>
           </li>
           <li>+1 (888) 888-88-88</li>
         </ul>

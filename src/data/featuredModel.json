@@ -1,0 +1,20 @@
+[
+  {
+    "id": 23,
+    "name": "KS MAX (1y guarantee)",
+    "price": "$1088.99",
+    "image": "KS_MAX_Black"
+  },
+  {
+    "id": 24,
+    "name": "KS MAX (2y guarantee)",
+    "price": "$1158.99",
+    "image": "KS_MAX_Black"
+  },
+  {
+    "id": 25,
+    "name": "KS MAX (3y guarantee)",
+    "price": "$1228.99",
+    "image": "KS_MAX_Black"
+  }
+]

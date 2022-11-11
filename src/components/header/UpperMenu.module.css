@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   height: 48px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 .upperMenu {
@@ -23,10 +27,34 @@
   align-items: center;
 }
 
-.cart {
+.cart,
+.instagram {
   display: flex;
   align-items: flex-end;
   cursor: pointer;
+  position: relative;
+}
+
+.cart {
+  transform: translateY(-1px);
+}
+
+.cart::after {
+  content: attr(data-number);
+  font-size: 1rem;
+  color: white;
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: var(--BLUE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  z-index: 101;
 }
 
 .links {

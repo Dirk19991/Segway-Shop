@@ -76,6 +76,20 @@
   height: 36px;
   border: 2px solid rgb(50, 57, 65, 0.33);
   font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.warrantyPriceBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  border: 2px solid rgb(50, 57, 65, 0.33);
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: var(--BLUE);
+  color: var(--WHITE);
 }
 
 .protectiveGear {
@@ -130,7 +144,7 @@
   justify-content: space-between;
 }
 
-.buttons > button {
+.button {
   display: block;
   width: 240px;
   height: 48px;
@@ -140,4 +154,10 @@
   font-weight: 700;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.routerLink {
+  color: var(--WHITE);
+  text-decoration: none;
 }

@@ -56,6 +56,8 @@ function FeatureText() {
     }
   }
 
+  const test = getIconStyles();
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.featureText}>
@@ -66,12 +68,8 @@ function FeatureText() {
           {content[highlightedFeature].text}
         </div>
       </div>
-      <div>
-        <img
-          className={getIconStyles()}
-          src={content[highlightedFeature].icon}
-          alt='icon'
-        />
+      <div className={test}>
+        <img src={content[highlightedFeature].icon} alt='icon' />
       </div>
     </div>
   );

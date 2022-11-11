@@ -16,7 +16,9 @@ function Logo() {
           <div className={classes.ownerTextWrapper}>
             <div className={classes.header}>JOHN SMITH</div>
             <div className={classes.text}>
-              ask the director <br></br>a question
+              <a href='mailto:email@example.com'>
+                ask the director <br></br>a question
+              </a>
             </div>
           </div>
         </div>

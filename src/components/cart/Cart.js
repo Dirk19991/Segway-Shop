@@ -5,7 +5,14 @@ import PlusMinusButton from '../utitlities/PlusMinusButton';
 
 function Cart() {
   const cart = useSelector((state) => state.cart.cart);
+  const numberOfItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
+  const total = cart
+    .reduce(
+      (acc, elem) => acc + elem.price.replaceAll('$', '') * elem.quantity,
+      0
+    )
+    .toFixed(2);
   return (
     <div className={classes.wrapper}>
       <div className={classes.cart}>
@@ -16,7 +23,8 @@ function Cart() {
               <div className={classes.image}>
                 <img
                   alt={elem.image}
-                  src={require(`../../assets/images/scootersHD/${elem.image}.png`)}></img>
+                  src={require(`../../assets/images/scootersHD/${elem.image}.png`)}
+                ></img>
               </div>
               <div>{elem.name}</div>
               <div>{elem.price}</div>
@@ -25,6 +33,9 @@ function Cart() {
             </div>
           ))}
         </div>
+        {numberOfItems > 0 && (
+          <div className={classes.header}>TOTAL: ${total}</div>
+        )}
       </div>
     </div>
   );

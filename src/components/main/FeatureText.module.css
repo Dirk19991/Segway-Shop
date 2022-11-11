@@ -25,7 +25,7 @@
 
 .map {
   padding-top: 20px;
-  animation-name: fadeIn;
+  animation-name: fadeInMap;
   animation-duration: 0.6s;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .charge {
-  animation-name: fadeIn;
+  animation-name: fadeInCharge;
   animation-duration: 0.6s;
 }
 
@@ -47,7 +47,7 @@
   animation-duration: 0.6s;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInMap {
   from {
     transform: scale(0.5);
   }
@@ -71,5 +71,14 @@
   }
   to {
     transform: scale(1.1);
+  }
+}
+
+@keyframes fadeInCharge {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
   }
 }

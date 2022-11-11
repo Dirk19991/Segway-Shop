@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import store from './store';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import ScrollToTop from './components/utitlities/ScrollToTop';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,12 @@ const router = createBrowserRouter([
       },
       {
         path: 'cart',
-        element: <Cart />,
+        element: (
+          <>
+            <ScrollToTop />
+            <Cart />
+          </>
+        ),
       },
     ],
   },
