@@ -1,5 +1,7 @@
 .wrapper {
-  height: 261px;
+  /* height: 261px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: var(--GREY);
   display: flex;
   justify-content: center;
