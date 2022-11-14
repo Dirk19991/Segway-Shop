@@ -40,7 +40,8 @@ function OtherModels() {
                 <div className={classes.image}>
                   <img
                     src={require(`../../assets/images/otherModels/${elem.image}.png`)}
-                    alt={elem.image}></img>
+                    alt={elem.image}
+                  ></img>
                 </div>
                 <div className={classes.modelHeader}>{elem.name}</div>
                 <div className={classes.price}>{elem.price}</div>
@@ -52,7 +53,8 @@ function OtherModels() {
                 ) : (
                   <button
                     onClick={() => dispatch(addToCart(elem))}
-                    className={classes.button}>
+                    className={classes.button}
+                  >
                     Add to cart
                   </button>
                 )}

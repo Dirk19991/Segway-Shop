@@ -1,5 +1,6 @@
 .wrapper {
-  height: 800px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: var(--WHITE);
   display: flex;
   justify-content: center;
@@ -26,7 +27,8 @@
   font-size: 1.5rem;
   color: var(--GREY);
   text-align: center;
-  width: 850px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .main {
@@ -70,4 +72,10 @@
   width: 100px;
   text-align: center;
   font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .iconsDownload {
+    width: 300px;
+  }
 }

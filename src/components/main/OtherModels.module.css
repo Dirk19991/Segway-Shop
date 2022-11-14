@@ -3,7 +3,8 @@
 
   display: flex;
   justify-content: center;
-  height: 850px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .otherModels {

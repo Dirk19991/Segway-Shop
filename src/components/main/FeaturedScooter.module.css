@@ -11,6 +11,7 @@
   color: var(--GREY);
   display: flex;
   gap: 50px;
+  justify-content: center;
 }
 
 .features {
@@ -21,6 +22,19 @@
 .image {
   width: 440px;
   margin-top: 44px;
+  align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .image {
+    display: none;
+  }
+}
+
+.image > img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .greenButton {

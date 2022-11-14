@@ -10,6 +10,12 @@ function UpperMenu() {
     state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
   );
 
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+  };
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.upperMenu}>
@@ -20,22 +26,42 @@ function UpperMenu() {
             </RouterLink>
           </li>
           <li>
-            <HashLink className={classes.routerLink} smooth to='/#features'>
+            <HashLink
+              className={classes.routerLink}
+              smooth
+              to='/#features'
+              scroll={(el) => scrollWithOffset(el)}
+            >
               FEATURES
             </HashLink>
           </li>
           <li>
-            <HashLink className={classes.routerLink} smooth to='/#accessories'>
+            <HashLink
+              className={classes.routerLink}
+              smooth
+              to='/#accessories'
+              scroll={(el) => scrollWithOffset(el)}
+            >
               ACCESSORIES
             </HashLink>
           </li>
           <li>
-            <HashLink className={classes.routerLink} smooth to='/#app'>
+            <HashLink
+              className={classes.routerLink}
+              smooth
+              to='/#app'
+              scroll={(el) => scrollWithOffset(el)}
+            >
               APP
             </HashLink>
           </li>
           <li>
-            <HashLink className={classes.routerLink} smooth to='/#contacts'>
+            <HashLink
+              className={classes.routerLink}
+              smooth
+              to='/#contacts'
+              scroll={(el) => scrollWithOffset(el)}
+            >
               CONTACTS
             </HashLink>
           </li>

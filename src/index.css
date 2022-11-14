@@ -12,13 +12,20 @@
   src: url('../src/assets/fonts/ProximaNova-Bold.woff') format('woff');
 }
 
-:root {
+html {
   --BLUE: rgb(0, 158, 255);
   --GREY: rgb(50, 57, 65);
   --WHITE: rgb(255, 255, 255);
   --GREY_2: rgb(153, 153, 153);
   --GREEN: rgb(106, 205, 104);
   font-size: 12px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 10px;
+  }
 }
 
 *,
@@ -35,7 +42,6 @@ body {
   font-family: 'Proximanova';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: visible;
 }
 
 code {

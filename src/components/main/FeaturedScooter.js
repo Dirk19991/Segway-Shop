@@ -4,7 +4,7 @@ import bigScooter from '../../assets/images/scooters/bigScooter.png';
 import amazon from '../../assets/images/amazon.png';
 import paymentOptions from '../../assets/images/paymentOptions.png';
 import { useDispatch, useSelector } from 'react-redux';
-import { chooseGuarantee } from '../../store/featuredModel';
+import { chooseGuarantee } from '../../store/featuredModelSlice';
 import featuredModel from '../../data/featuredModel.json';
 import categories from '../../data/categories.json';
 import { addToCart } from '../../store/cartSlice';

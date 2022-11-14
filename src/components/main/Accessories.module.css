@@ -1,5 +1,6 @@
 .wrapper {
-  height: 1420px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: var(--WHITE);
   display: flex;
   justify-content: center;
@@ -10,7 +11,9 @@
   width: 1000px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 20px;
 }
 
 .accessory {

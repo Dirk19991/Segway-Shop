@@ -2,6 +2,7 @@
   min-height: 300px;
   justify-self: center;
   object-fit: contain;
+  display: flex;
 }
 
 .name {
@@ -47,4 +48,14 @@
   text-transform: uppercase;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.closeButton {
+  position: absolute;
+
+  left: 93%;
+  top: 50%;
+  background-color: lightgray;
+  color: gray;
+  align-self: flex-start;
 }

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 129px;
-  height: 39px;
+  height: 42px;
   border: 1px solid #c6c6c6;
   background-color: var(--WHITE);
 
@@ -19,4 +19,8 @@
   background-color: rgba(211, 211, 211, 0.351);
   border-radius: 5px;
   cursor: pointer;
+}
+
+.quantity {
+  transition: all 1.5s;
 }

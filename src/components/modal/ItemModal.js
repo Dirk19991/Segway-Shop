@@ -45,13 +45,15 @@ export default function ItemModal() {
         BackdropComponent={Backdrop}
         BackdropProps={{
           style: { backgroundColor: 'rgba(0,0,0, 0.5)' },
-        }}>
+        }}
+      >
         <Fade in={open}>
           <Box sx={style}>
             <div className={classes.image}>
               <img
                 alt={chosenItem.image}
-                src={require(`../../assets/images/scootersHD/${chosenItem.image}.png`)}></img>
+                src={require(`../../assets/images/scootersHD/${chosenItem.image}.png`)}
+              ></img>
             </div>
             <div className={classes.name}>{chosenItem.name}</div>
             <div className={classes.characteristics}>
@@ -76,13 +78,15 @@ export default function ItemModal() {
             {cart.cart.find((item) => item.id === chosenItem.id)?.quantity >
             0 ? (
               <PlusMinusButton
-                marginTop='24px'
+                marginTop='23px'
+                height='39px'
                 elem={cart.cart.find((item) => item.id === chosenItem.id)}
               />
             ) : (
               <button
                 onClick={() => dispatch(addToCart(chosenItem))}
-                className={classes.button}>
+                className={classes.button}
+              >
                 Add to cart
               </button>
             )}
