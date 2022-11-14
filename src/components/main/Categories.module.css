@@ -50,3 +50,9 @@
 .maxWhite > img {
   transform: scale(1.3);
 }
+
+@media (max-width: 1024px) {
+  .item {
+    flex: 1 0 13%;
+  }
+}

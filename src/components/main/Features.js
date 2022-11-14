@@ -28,19 +28,22 @@ function Features() {
               highlightedFeature === 'delivery'
                 ? classes.highlighted
                 : classes.feature
-            }>
+            }
+          >
             <div>
               <img
                 className={
                   highlightedFeature === 'delivery'
                     ? classes.highlightedIcon
-                    : ''
+                    : classes.icon
                 }
                 src={delivery}
                 alt='delivery'
               />
             </div>
-            <div>Delivery within 1 business day</div>
+            <div className={classes.featureText}>
+              Delivery within 1 business day
+            </div>
           </div>
           <div
             onClick={() => dispatch(changeHighlight('warranty'))}
@@ -48,19 +51,20 @@ function Features() {
               highlightedFeature === 'warranty'
                 ? classes.highlighted
                 : classes.feature
-            }>
+            }
+          >
             <div>
               <img
                 className={
                   highlightedFeature === 'warranty'
                     ? classes.highlightedIcon
-                    : ''
+                    : classes.icon
                 }
                 src={basicWarranty}
                 alt='basicWarranty'
               />
             </div>
-            <div>Basic 1 year warranty</div>
+            <div className={classes.featureText}>Basic 1 year warranty</div>
           </div>
           <div
             onClick={() => dispatch(changeHighlight('support'))}
@@ -68,19 +72,20 @@ function Features() {
               highlightedFeature === 'support'
                 ? classes.highlighted
                 : classes.feature
-            }>
+            }
+          >
             <div>
               <img
                 className={
                   highlightedFeature === 'support'
                     ? classes.highlightedIcon
-                    : ''
+                    : classes.icon
                 }
                 src={support}
                 alt='support'
               />
             </div>
-            <div>After Sales Support</div>
+            <div className={classes.featureText}>After Sales Support</div>
           </div>
           <div
             onClick={() => dispatch(changeHighlight('charge'))}
@@ -88,17 +93,20 @@ function Features() {
               highlightedFeature === 'charge'
                 ? classes.highlighted
                 : classes.feature
-            }>
+            }
+          >
             <div>
               <img
                 className={
-                  highlightedFeature === 'charge' ? classes.highlightedIcon : ''
+                  highlightedFeature === 'charge'
+                    ? classes.highlightedIcon
+                    : classes.icon
                 }
                 src={charge}
                 alt='charge'
               />
             </div>
-            <div>Up to 40 miles per charge</div>
+            <div className={classes.featureText}>Up to 40 miles per charge</div>
           </div>
         </div>
         <FeatureText />

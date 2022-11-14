@@ -45,3 +45,9 @@
   z-index: -1;
   border-radius: 50%;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    display: none;
+  }
+}

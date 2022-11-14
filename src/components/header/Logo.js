@@ -1,14 +1,17 @@
 import segway from '../../assets/icons/segway.svg';
 import owner from '../../assets/images/owner.png';
 import classes from './Logo.module.css';
+import { Link as RouterLink } from 'react-router-dom';
 
 function Logo() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.logo}>
-        <div>
-          <img src={segway} alt='segway' />
-        </div>
+        <RouterLink className={classes.routerLink} to='/'>
+          <div>
+            <img src={segway} alt='segway' />
+          </div>
+        </RouterLink>
         <div className={classes.owner}>
           <div>
             <img src={owner} alt='owner' />

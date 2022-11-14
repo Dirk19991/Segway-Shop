@@ -40,3 +40,14 @@
 .highlightedIcon {
   filter: brightness(0) invert(1);
 }
+
+@media (max-width: 1024px) {
+  .feature,
+  .highlighted {
+    width: 135px;
+    padding: 5px 10px;
+  }
+  .features {
+    width: 700px;
+  }
+}

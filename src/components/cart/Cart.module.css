@@ -2,7 +2,7 @@
   background: linear-gradient(#eeeeee, #ffffff);
   display: flex;
   justify-content: center;
-  min-height: 1200px;
+  padding: 40px 0;
 }
 
 .cart {
@@ -11,19 +11,25 @@
   flex-direction: column;
 }
 
-.header {
+.header,
+.orderHeader {
   color: var(--GREY);
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
   margin-top: 20px;
   align-self: center;
+  text-align: center;
+}
+
+.orderHeader {
+  margin-bottom: 20px;
 }
 
 .cartGrid {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
+  align-items: center;
   row-gap: 40px;
   width: 1000px;
   font-size: 1.5rem;
@@ -74,4 +80,53 @@
   background-color: rgba(211, 211, 211, 0.351);
   border-radius: 5px;
   cursor: pointer;
+}
+
+.scooterImage {
+  display: flex;
+  justify-content: center;
+}
+
+.scooterImage > img {
+  width: 500px;
+}
+
+.clearButton,
+.orderButton {
+  display: block;
+  width: 240px;
+  height: 48px;
+  background-color: var(--WHITE);
+  color: var(--GREY);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.clearButton {
+  border: 2px solid red;
+}
+
+.orderButton {
+  border: 2px solid green;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: 700px;
+  }
 }

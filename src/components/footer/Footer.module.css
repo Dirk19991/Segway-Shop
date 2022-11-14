@@ -24,3 +24,16 @@
   font-size: 1.1rem;
   gap: 45px;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0 20px;
+  }
+
+  .contacts {
+    gap: 15px;
+  }
+  .logo {
+    margin-right: 15px;
+  }
+}

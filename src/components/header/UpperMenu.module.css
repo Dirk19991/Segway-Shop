@@ -65,3 +65,9 @@
   color: var(--WHITE);
   text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+  .upperMenu {
+    padding: 0 20px;
+  }
+}

@@ -13,19 +13,19 @@ function Categories() {
     <div className={classes.wrapper}>
       <div className={classes.categories}>
         {categories.map((elem) => (
-          <div>
-            <div key={elem.id} className={classes.item}>
-              <div
-                onClick={() => {
-                  dispatch(toggleModal(true));
-                  dispatch(chooseItem(elem));
-                }}>
-                <img
-                  alt={elem.image}
-                  src={require(`../../assets/images/scooters/${elem.image}.png`)}></img>
-              </div>
-              <div className={classes.itemName}>{elem.name}</div>
+          <div key={elem.id} className={classes.item}>
+            <div
+              onClick={() => {
+                dispatch(toggleModal(true));
+                dispatch(chooseItem(elem));
+              }}
+            >
+              <img
+                alt={elem.image}
+                src={require(`../../assets/images/scooters/${elem.image}.png`)}
+              ></img>
             </div>
+            <div className={classes.itemName}>{elem.name}</div>
           </div>
         ))}
 
@@ -35,7 +35,8 @@ function Categories() {
               <img
                 className={classes.accessoriesImage}
                 alt='Accessories'
-                src={Accessories}></img>
+                src={Accessories}
+              ></img>
             </HashLink>
           </div>
           <div className={classes.itemName}>ACCESSORIES</div>
