@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Cart from './components/cart/Cart';
-import Main from './components/main/Main';
-import Footer from './components/footer/Footer';
-import store from './store';
+import App from './app/App';
+import Cart from './features/cart/Cart';
+import Main from './features/main/Main';
+import Footer from './features/footer/Footer';
+import store from './app/store';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import ScrollToTop from './components/utitlities/ScrollToTop';
+import ScrollToTop from './features/common/ScrollToTop';
 
 const router = createBrowserRouter([
   {

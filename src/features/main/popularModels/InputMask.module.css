@@ -1,0 +1,13 @@
+.input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 1.5rem;
+  color: #c4c4c4;
+  border: none;
+  text-align: center;
+}
+
+.input:focus {
+  outline: none;
+}
