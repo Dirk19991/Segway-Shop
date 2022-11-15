@@ -8,23 +8,7 @@ import { toggleModal } from './modalSlice';
 import classes from './ItemModal.module.css';
 import { addToCart } from '../cart/cartSlice';
 import PlusMinusButton from '../common/PlusMinusButton';
-
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 4,
-  p: 2,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: '10px',
-};
+import { useMediaQuery } from 'react-responsive';
 
 export default function ItemModal() {
   const open = useSelector((state) => state.modal.open);
@@ -33,6 +17,25 @@ export default function ItemModal() {
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
+
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: isMobile ? 240 : 250,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 4,
+    p: 2,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '10px',
+  };
 
   return (
     <div>

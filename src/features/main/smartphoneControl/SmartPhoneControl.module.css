@@ -8,10 +8,11 @@
 }
 
 .smartPhoneControl {
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .header {
@@ -21,6 +22,7 @@
   color: var(--GREY);
   margin-top: 40px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .description {
@@ -29,16 +31,19 @@
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 100%;
 }
 
 .main {
+  max-width: 1000px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   margin-top: 70px;
 }
 
 .iconsDownload {
-  width: 400px;
+  width: 45%;
   margin-top: 55px;
 }
 
@@ -50,7 +55,11 @@
 }
 
 .image {
-  width: 400px;
+  width: 45%;
+}
+
+.image > img {
+  max-width: 150%;
 }
 
 .icon {
@@ -74,8 +83,17 @@
   font-size: 1.1rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .iconsDownload {
-    width: 300px;
+    display: none;
+  }
+
+  .header {
+    text-align: center;
+    padding: 0 20px;
+  }
+  .image {
+    align-self: center;
+    justify-self: center;
   }
 }

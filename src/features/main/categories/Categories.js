@@ -10,10 +10,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { isMobile } from 'react-device-detect';
+import { useMediaQuery } from 'react-responsive';
 
 function Categories() {
   const dispatch = useDispatch();
+
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   const categoriesJSX = (
     <>

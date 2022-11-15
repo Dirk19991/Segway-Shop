@@ -8,7 +8,7 @@
 }
 
 .otherModels {
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,10 +31,11 @@
 }
 
 .otherModelsGrid {
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 80px;
+  column-gap: 5%;
   row-gap: 50px;
   margin-top: 30px;
 }
@@ -51,8 +52,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
-  width: 190px;
+  width: 20%;
 }
 
 .price {
@@ -64,8 +66,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 129px;
+  max-width: 129px;
   height: 42px;
+  padding: 10px;
   border: 2px solid #c6c6c6;
   background-color: var(--WHITE);
   color: #c6c6c6;
@@ -78,10 +81,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 129px;
+  max-width: 129px;
   height: 42px;
   border: 2px solid #c6c6c6;
-
+  padding: 10px;
   color: white;
   background-color: #218838;
   font-size: 1.1rem;
@@ -97,17 +100,32 @@
   gap: 30px;
 }
 
-@media (max-width: 1024px) {
-  .form {
-    gap: 36px;
+.image {
+  max-width: 190px;
+}
+@media (max-width: 767px) {
+  .otherModel {
+    width: 40%;
   }
-  .subheader {
-    margin-top: 10px;
+  .header {
+    text-align: center;
+    padding: 0 20px;
   }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .otherModel {
     width: 90px;
   }
-}
+  .modelHeader {
+    font-size: 1.3rem;
+  }
+  .image > img {
+    width: 70px;
+  }
+  .button {
+    width: 70px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+} */

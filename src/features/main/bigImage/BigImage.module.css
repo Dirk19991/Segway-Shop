@@ -1,5 +1,6 @@
 .wrapper {
-  min-height: 700px;
+  padding: 15px 0;
+
   display: flex;
   justify-content: center;
   background-color: #f5f5f5;
@@ -22,10 +23,10 @@
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .bigImage > img {
     width: 100%;
     object-fit: cover;
-    object-position: -360px;
+    object-position: center;
   }
 }

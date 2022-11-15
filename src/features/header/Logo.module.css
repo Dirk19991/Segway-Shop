@@ -44,3 +44,12 @@
     margin-right: 0;
   }
 }
+
+@media (max-width: 767px) {
+  .wrapper {
+    margin-top: 48px;
+  }
+  .image {
+    width: 130px;
+  }
+}

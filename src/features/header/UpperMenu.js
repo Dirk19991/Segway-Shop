@@ -6,20 +6,20 @@ import { HashLink } from 'react-router-hash-link';
 import { useSelector } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
 import { burgerStyles } from './burgerStyles';
-import { isMobile } from 'react-device-detect';
+import { useMediaQuery } from 'react-responsive';
 
 function UpperMenu() {
   const numberOfItems = useSelector((state) =>
     state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
   );
 
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -80;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
-
-  console.log(isMobile);
 
   const links = (
     <>

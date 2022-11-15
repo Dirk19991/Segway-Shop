@@ -5,7 +5,7 @@
   height: 48px;
   position: sticky;
 
-  width: 100%;
+  width: 100vw;
   top: 0;
   z-index: 100;
 }
@@ -73,13 +73,18 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .wrapper {
-    position: fixed;
     width: 100vw;
   }
   .upperMenu {
     width: 100vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    position: fixed;
   }
 }
 

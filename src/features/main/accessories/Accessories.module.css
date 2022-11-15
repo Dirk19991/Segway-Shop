@@ -8,7 +8,7 @@
 }
 
 .accessories {
-  width: 1000px;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -18,10 +18,11 @@
 
 .accessory {
   color: var(--GREY);
-  width: 300px;
-  height: 432px;
+  width: 30%;
+  min-height: 432px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   row-gap: 20px;
   align-items: center;
 }
@@ -78,7 +79,7 @@
   color: #999999;
   font-size: 1.1rem;
   text-align: center;
-  height: 75px;
+  max-height: 75px;
 }
 
 .price {
@@ -91,7 +92,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 129px;
+  max-width: 129px;
+  padding: 10px;
   height: 42px;
   border: 2px solid #c6c6c6;
   background-color: var(--WHITE);
@@ -113,4 +115,35 @@
   font-size: 1.1rem;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .image > img {
+    object-fit: contain;
+    height: 95px;
+    width: 100px;
+  }
+  .image::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0px;
+    background-color: #eeeeee;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+  .header2 {
+    font-size: 1.5rem;
+  }
+  .description {
+    display: none;
+  }
+  .accessory {
+    min-height: 232px;
+  }
 }
