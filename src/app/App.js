@@ -12,26 +12,14 @@ import { setMobile } from './isMobileSlice';
 function App() {
   const open = useSelector((state) => state.modal.open);
   const openClearCart = useSelector((state) => state.clearCartModal.open);
-  const isMobile = useSelector((state) => state.isMobile.isMobile);
+
   const dispatch = useDispatch();
 
   let location = useLocation();
 
-  const updateMedia = () => {
-    if (isMobile === window.innerWidth < 767) {
-      return;
-    }
-    dispatch(setMobile(window.innerWidth < 767));
-  };
-
   useEffect(() => {
     dispatch(placeOrder(false));
   }, [location, dispatch]);
-
-  useEffect(() => {
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-  });
 
   return (
     <>

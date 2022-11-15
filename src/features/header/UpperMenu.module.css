@@ -76,6 +76,10 @@
 @media (max-width: 767px) {
   .wrapper {
     position: fixed;
+    width: 100vw;
+  }
+  .upperMenu {
+    width: 100vw;
   }
 }
 

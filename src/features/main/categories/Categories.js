@@ -10,10 +10,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import { isMobile } from 'react-device-detect';
+
 function Categories() {
   const dispatch = useDispatch();
-
-  const isMobile = useSelector((state) => state.isMobile.isMobile);
 
   const categoriesJSX = (
     <>

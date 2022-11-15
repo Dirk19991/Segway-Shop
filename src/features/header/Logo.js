@@ -2,11 +2,9 @@ import segway from '../../assets/icons/segway.svg';
 import owner from '../../assets/images/owner.png';
 import classes from './Logo.module.css';
 import { Link as RouterLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { isMobile } from 'react-device-detect';
 
 function Logo() {
-  const isMobile = useSelector((state) => state.isMobile.isMobile);
-
   return (
     <div
       style={isMobile ? { marginTop: '48px' } : {}}

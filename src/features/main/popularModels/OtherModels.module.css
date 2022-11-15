@@ -105,3 +105,9 @@
     margin-top: 10px;
   }
 }
+
+@media (max-width: 1024px) {
+  .otherModel {
+    width: 90px;
+  }
+}

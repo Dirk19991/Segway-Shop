@@ -10,13 +10,13 @@ import categories from '../../../data/categories.json';
 import { addToCart } from '../../cart/cartSlice';
 import PlusMinusButton from '../../common/PlusMinusButton';
 import { Link as RouterLink } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 function FeaturedScooter() {
   const totalCost = useSelector((state) => state.featuredModel.totalCost);
   const guarantees = useSelector((state) => state.featuredModel.guarantees);
   const state = useSelector((state) => state.featuredModel);
   const cart = useSelector((state) => state.cart);
-  const isMobile = useSelector((state) => state.isMobile.isMobile);
 
   const dispatch = useDispatch();
 
