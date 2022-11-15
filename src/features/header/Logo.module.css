@@ -1,0 +1,46 @@
+.wrapper {
+  background-color: var(--WHITE);
+  display: flex;
+  justify-content: center;
+  height: 101px;
+}
+
+.logo {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.owner {
+  display: flex;
+  justify-self: flex-start;
+  margin-right: 60px;
+  gap: 12px;
+}
+
+.ownerTextWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  font-size: 1.5rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: var(--BLUE);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    padding: 0 20px;
+  }
+  .owner {
+    margin-right: 0;
+  }
+}

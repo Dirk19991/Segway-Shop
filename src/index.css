@@ -19,7 +19,6 @@ html {
   --GREY_2: rgb(153, 153, 153);
   --GREEN: rgb(106, 205, 104);
   font-size: 12px;
-  overflow-x: hidden;
 }
 
 @media (max-width: 1024px) {

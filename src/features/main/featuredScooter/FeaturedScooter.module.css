@@ -1,0 +1,229 @@
+.wrapper {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  /* height: 760px; */
+  color: var(--WHITE);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.featuredScooter {
+  width: 1000px;
+  color: var(--GREY);
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.features {
+  width: 560px;
+  margin-top: 44px;
+}
+
+.image {
+  width: 440px;
+  margin-top: 44px;
+  align-self: center;
+}
+
+.image > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.greenButton {
+  color: var(--GREEN);
+  width: 89px;
+  height: 27px;
+  border: 2px solid var(--GREEN);
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigTitle {
+  font-size: 6.6rem;
+  font-weight: 700;
+  line-height: 70px;
+  margin-top: 10px;
+}
+
+.card {
+  width: 540px;
+  height: 300px;
+  border: 2px solid rgb(50, 57, 65, 0.33);
+  padding: 28px 20px;
+  box-shadow: 4px 0px 5px rgba(0, 0, 0, 0.25), 0px 4px 5px rgba(0, 0, 0, 0.25);
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+
+.warrantyMessage {
+  font-size: 1.5rem;
+  color: var(--GREY);
+  margin-bottom: 12px;
+}
+
+.warrantyMessage > span {
+  font-weight: 700;
+}
+
+.warrantyPriceWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.warrantyPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  border: 2px solid rgb(50, 57, 65, 0.33);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.warrantyPriceBlue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 36px;
+  border: 2px solid rgb(50, 57, 65, 0.33);
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: var(--BLUE);
+  color: var(--WHITE);
+}
+
+.protectiveGear {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.protectiveGear > div {
+  width: 145px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+}
+
+.bigPrice {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.blueText {
+  color: var(--BLUE);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.greyText {
+  color: var(--GREY);
+  font-size: 1.5rem;
+}
+
+.greenText {
+  color: var(--GREEN);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.paymentMethodsText {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.protection > img {
+  width: 120px;
+  height: 87px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  display: block;
+  width: 240px;
+  height: 48px;
+  background-color: var(--BLUE);
+  color: var(--WHITE);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.routerLink {
+  color: var(--WHITE);
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .image {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .bigTitle {
+    max-width: 350px;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 40px;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 340px;
+  }
+
+  .button {
+    width: 130px;
+    height: 35px;
+  }
+  .strikethrough {
+    text-decoration: line-through;
+    font-size: 1rem;
+  }
+
+  .bigPrice {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .blueText {
+    font-size: 1.5rem;
+  }
+  .protection > img {
+    width: 80px;
+    height: 58px;
+  }
+  .protectiveGear {
+    width: 330px;
+  }
+  .warrantyMessage {
+    text-align: center;
+  }
+  .paymentMethodsText {
+    font-size: 1rem;
+  }
+  .paymentMethodsIcons {
+    transform: scale(0.8);
+  }
+}

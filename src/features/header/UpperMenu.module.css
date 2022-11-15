@@ -1,0 +1,84 @@
+.wrapper {
+  background-color: var(--GREY);
+  display: flex;
+  justify-content: center;
+  height: 48px;
+  position: sticky;
+
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.upperMenu {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--WHITE);
+  font-family: 'Proximanova';
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.upperMenu > ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.cart,
+.instagram {
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart {
+  transform: translateY(-1px);
+}
+
+.cart::after {
+  content: attr(data-number);
+  font-size: 1rem;
+  color: white;
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: var(--BLUE);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  z-index: 101;
+}
+
+.links {
+  cursor: pointer;
+}
+
+.routerLink {
+  color: var(--WHITE);
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .upperMenu {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    position: fixed;
+  }
+}
+
+.menu {
+  transform: translateY(-45px);
+}
