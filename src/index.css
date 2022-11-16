@@ -48,10 +48,9 @@ body {
 @media (max-width: 1024px) {
   body {
     display: block;
-    overflow: hidden;
   }
-  body > div > * {
-    width: 100vw;
+  html {
+    overflow-x: hidden;
   }
 }
 

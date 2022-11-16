@@ -8,13 +8,17 @@ import SmartPhoneControl from './smartphoneControl/SmartPhoneControl';
 import OtherModels from './popularModels/OtherModels';
 import Categories from './categories/Categories';
 import FreeShipping from './categories/FreeShipping';
+import { useMediaQuery } from 'react-responsive';
+
 function Main() {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   return (
     <>
       <Categories />
       <FreeShipping />
       <FeaturedScooter />
-      <Features />
+      {isMobile ? '' : <Features />}
       <PackingList />
       <Accessories />
       <BigImage />

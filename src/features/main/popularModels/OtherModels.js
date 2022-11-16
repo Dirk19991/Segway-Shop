@@ -43,6 +43,7 @@ function OtherModels() {
                     alt={elem.image}
                   ></img>
                 </div>
+
                 <div className={classes.modelHeader}>{elem.name}</div>
                 <div className={classes.price}>{elem.price}</div>
 

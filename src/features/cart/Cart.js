@@ -46,10 +46,12 @@ function Cart() {
                   src={require(`../../assets/images/scootersHD/${elem.image}.png`)}
                 ></img>
               </div>
-              <div>{elem.name}</div>
-              <div>{elem.price}</div>
+              <div className={classes.modelInfo}>
+                <div>{elem.name}</div>
+                <div>{elem.price}</div>
 
-              <PlusMinusButton width='80px' height='20px' elem={elem} />
+                <PlusMinusButton width='80px' height='20px' elem={elem} />
+              </div>
             </div>
           ))}
         </div>
