@@ -20,6 +20,8 @@ html {
   --GREEN: rgb(106, 205, 104);
   font-size: 12px;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -42,6 +44,8 @@ body {
   font-family: 'Proximanova';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  position: relative;
   /* display: flex; */
 }
 
