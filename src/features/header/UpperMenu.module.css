@@ -89,5 +89,5 @@
 }
 
 .menu {
-  transform: translateY(-45px);
+  transform: translateX(-30px) translateY(-45px);
 }

@@ -100,7 +100,6 @@ function UpperMenu() {
               onStateChange={(state) => dispatch(toggleMenu(state.isOpen))}
               isOpen={menuOpened}
               className={classes.menu}
-              right
               width={'200px'}
               styles={burgerStyles}
             >
