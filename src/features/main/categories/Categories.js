@@ -13,6 +13,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useMediaQuery } from 'react-responsive';
 
 function Categories() {
+  const html = document.querySelector('html');
+
   const dispatch = useDispatch();
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });

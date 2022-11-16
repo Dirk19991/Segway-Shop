@@ -11,3 +11,9 @@
 .input:focus {
   outline: none;
 }
+
+@media (max-width: 767px) {
+  .input {
+    font-size: 1rem;
+  }
+}

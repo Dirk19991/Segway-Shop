@@ -36,6 +36,7 @@ export default function ItemModal() {
     justifyContent: 'center',
     alignItems: 'center',
     gap: '10px',
+    paddingRight: '0',
   };
 
   return (
