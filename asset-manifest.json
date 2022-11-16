@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/segway-shop/static/css/main.590cf72e.css",
-    "main.js": "/segway-shop/static/js/main.104792ea.js",
+    "main.js": "/segway-shop/static/js/main.82c8e86f.js",
     "static/media/bigImage.png": "/segway-shop/static/media/bigImage.b3e14e35df17904acb0e.png",
     "static/media/mediumImage.png": "/segway-shop/static/media/mediumImage.fdc61136c761782bbe53.png",
     "static/media/phone.png": "/segway-shop/static/media/phone.2d0ea31a28c45c0bb05d.png",
@@ -63,10 +63,10 @@
     "static/media/charge.svg": "/segway-shop/static/media/charge.2c09b971bc4344f82d634dfbfa80fd5f.svg",
     "static/media/polygon.svg": "/segway-shop/static/media/polygon.66e1d451d50abd9124be.svg",
     "main.590cf72e.css.map": "/segway-shop/static/css/main.590cf72e.css.map",
-    "main.104792ea.js.map": "/segway-shop/static/js/main.104792ea.js.map"
+    "main.82c8e86f.js.map": "/segway-shop/static/js/main.82c8e86f.js.map"
   },
   "entrypoints": [
     "static/css/main.590cf72e.css",
-    "static/js/main.104792ea.js"
+    "static/js/main.82c8e86f.js"
   ]
 }
