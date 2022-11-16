@@ -3,15 +3,20 @@ import instagram from '../../assets/icons/instagram.svg';
 import classes from './UpperMenu.module.css';
 import { Link as RouterLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
 import { burgerStyles } from './burgerStyles';
 import { useMediaQuery } from 'react-responsive';
+import { toggleMenu } from './menuSlice';
 
 function UpperMenu() {
   const numberOfItems = useSelector((state) =>
     state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
   );
+
+  const menuOpened = useSelector((state) => state.menuOpened.menuOpened);
+
+  console.log(menuOpened);
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
@@ -21,25 +26,38 @@ function UpperMenu() {
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
+  const dispatch = useDispatch();
+
   const links = (
     <>
       <li>
-        <RouterLink className={classes.routerLink} to='/'>
-          HOME
-        </RouterLink>
-      </li>
-      <li>
         <HashLink
+          onClick={() => dispatch(toggleMenu(false))}
           className={classes.routerLink}
           smooth
-          to='/#features'
+          to='/#home'
           scroll={(el) => scrollWithOffset(el)}
         >
-          FEATURES
+          HOME
         </HashLink>
       </li>
+      {isMobile ? (
+        ''
+      ) : (
+        <li>
+          <HashLink
+            className={classes.routerLink}
+            smooth
+            to='/#features'
+            scroll={(el) => scrollWithOffset(el)}
+          >
+            FEATURES
+          </HashLink>
+        </li>
+      )}
       <li>
         <HashLink
+          onClick={() => dispatch(toggleMenu(false))}
           className={classes.routerLink}
           smooth
           to='/#accessories'
@@ -50,6 +68,7 @@ function UpperMenu() {
       </li>
       <li>
         <HashLink
+          onClick={() => dispatch(toggleMenu(false))}
           className={classes.routerLink}
           smooth
           to='/#app'
@@ -60,6 +79,7 @@ function UpperMenu() {
       </li>
       <li>
         <HashLink
+          onClick={() => dispatch(toggleMenu(false))}
           className={classes.routerLink}
           smooth
           to='/#contacts'
@@ -77,6 +97,8 @@ function UpperMenu() {
         <ul className={classes.links}>
           {isMobile ? (
             <Menu
+              onStateChange={(state) => dispatch(toggleMenu(state.isOpen))}
+              isOpen={menuOpened}
               className={classes.menu}
               right
               width={'200px'}

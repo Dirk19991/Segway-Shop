@@ -17,7 +17,7 @@ import cartReducer from '../features/cart/cartSlice';
 import featuredModelReducer from '../features/main/featuredScooter/featuredModelSlice';
 import clearCartModalReducer from '../features/cart/clearCartModalSlice';
 import placeOrderReducer from '../features/cart/placeOrderSlice';
-import isMobileReducer from './isMobileSlice';
+import menuReducer from '../features/header/menuSlice';
 
 const rootReducer = combineReducers({
   features: featuresReducer,
@@ -26,7 +26,7 @@ const rootReducer = combineReducers({
   featuredModel: featuredModelReducer,
   clearCartModal: clearCartModalReducer,
   placeOrder: placeOrderReducer,
-  isMobile: isMobileReducer,
+  menuOpened: menuReducer,
 });
 
 const persistConfig = {

@@ -6,7 +6,7 @@ import { Link as RouterLink } from 'react-router-dom';
 function Logo() {
   return (
     <div className={classes.wrapper}>
-      <div className={classes.logo}>
+      <div id='home' className={classes.logo}>
         <RouterLink className={classes.routerLink} to='/'>
           <div>
             <img className={classes.image} src={segway} alt='segway' />

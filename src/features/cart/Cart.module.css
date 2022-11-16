@@ -145,11 +145,10 @@
   .modelInfo > div {
     width: 30%;
   }
-}
-
-.clearButton,
-.orderButton {
-  width: 150px;
-  height: 30px;
-  font-size: 1rem;
+  .clearButton,
+  .orderButton {
+    width: 150px;
+    height: 30px;
+    font-size: 1rem;
+  }
 }
