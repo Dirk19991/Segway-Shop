@@ -8,7 +8,7 @@ function ImpressiveFeatures() {
         <div className={classes.mainHeader}>IMPRESSIVE FEATURES</div>
         <div className={classes.featuresBox}>
           {impressiveFeatures.map((elem) => (
-            <div className={classes.feature}>
+            <div key={elem.image} className={classes.feature}>
               <div className={classes.image}>
                 <img
                   src={require(`../../../assets/images/impressiveFeatures/${elem.image}.svg`)}

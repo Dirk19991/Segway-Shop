@@ -8,6 +8,15 @@ import settings from '../../../assets/images/smartphone/settings.svg';
 import training from '../../../assets/images/smartphone/training.svg';
 
 function SmartPhoneControl() {
+  const icons = [
+    { icon: antiTheft, description: 'Anti-theft protection' },
+    { icon: dashboard, description: 'Dashboard' },
+    { icon: firmware, description: 'Firmware upgrade' },
+    { icon: status, description: 'Device status' },
+    { icon: settings, description: 'Settings and restrictions' },
+    { icon: training, description: 'Training program' },
+  ];
+
   return (
     <div className={classes.wrapper}>
       <div id='app' className={classes.smartPhoneControl}>
@@ -25,75 +34,20 @@ function SmartPhoneControl() {
         <div className={classes.main}>
           <div className={classes.iconsDownload}>
             <div className={classes.icons}>
-              <div className={classes.iconContainer}>
-                <div className={classes.icon}>
-                  <img
-                    className={classes.contentIcon}
-                    src={antiTheft}
-                    alt='antiTheft'
-                  />
+              {icons.map((elem) => (
+                <div key={elem.icon} className={classes.iconContainer}>
+                  <div className={classes.icon}>
+                    <img
+                      className={classes.contentIcon}
+                      src={elem.icon}
+                      alt={elem.icon}
+                    />
+                  </div>
+                  <div className={classes.iconDescription}>
+                    {elem.description}
+                  </div>
                 </div>
-                <div className={classes.iconDescription}>
-                  Anti-theft protection
-                </div>
-              </div>
-
-              <div className={classes.iconContainer}>
-                <div className={classes.icon}>
-                  <img
-                    className={classes.contentIcon}
-                    src={dashboard}
-                    alt='dashboard'
-                  />
-                </div>
-                <div className={classes.iconDescription}>Dashboard</div>
-              </div>
-
-              <div className={classes.iconContainer}>
-                <div className={classes.icon}>
-                  <img
-                    className={classes.contentIcon}
-                    src={firmware}
-                    alt='firmware'
-                  />
-                </div>
-                <div className={classes.iconDescription}>Firmware upgrade</div>
-              </div>
-
-              <div className={classes.iconContainer}>
-                <div className={classes.icon}>
-                  <img
-                    className={classes.contentIcon}
-                    src={status}
-                    alt='status'
-                  />
-                </div>
-                <div className={classes.iconDescription}>Device status</div>
-              </div>
-
-              <div className={classes.iconContainer}>
-                <div className={classes.icon}>
-                  <img
-                    className={classes.contentIcon}
-                    src={settings}
-                    alt='settings'
-                  />
-                </div>
-                <div className={classes.iconDescription}>
-                  Settings and restrictions
-                </div>
-              </div>
-
-              <div className={classes.iconContainer}>
-                <div className={classes.icon}>
-                  <img
-                    className={classes.contentIcon}
-                    src={training}
-                    alt='training'
-                  />
-                </div>
-                <div className={classes.iconDescription}>Training program</div>
-              </div>
+              ))}
             </div>
             <div className={classes.download}></div>
           </div>

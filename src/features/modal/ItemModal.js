@@ -13,7 +13,6 @@ import { useMediaQuery } from 'react-responsive';
 export default function ItemModal() {
   const open = useSelector((state) => state.modal.open);
   const chosenItem = useSelector((state) => state.modal.chosenItem);
-  console.log(chosenItem);
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);

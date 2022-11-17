@@ -16,8 +16,6 @@ function UpperMenu() {
 
   const menuOpened = useSelector((state) => state.menuOpened.menuOpened);
 
-  console.log(menuOpened);
-
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   const scrollWithOffset = (el) => {

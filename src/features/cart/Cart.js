@@ -39,7 +39,7 @@ function Cart() {
 
         <div className={classes.cartGrid}>
           {cart.map((elem) => (
-            <div className={classes.item}>
+            <div key={elem.id} className={classes.item}>
               <div className={classes.image}>
                 <img
                   alt={elem.image}

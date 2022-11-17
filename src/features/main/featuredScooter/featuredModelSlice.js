@@ -18,14 +18,15 @@ const featuredModelSlice = createSlice({
       if (state.guarantees[action.payload.chosen] === true) {
         state.chosenGuarantee = null;
         state.totalCost = state.price;
-        state.guarantees.low = false;
-        state.guarantees.middle = false;
-        state.guarantees.high = false;
+        for (let elem in state.guarantees) {
+          state.guarantees[elem] = false;
+        }
+
         state.id = null;
       } else {
-        state.guarantees.low = false;
-        state.guarantees.middle = false;
-        state.guarantees.high = false;
+        for (let elem in state.guarantees) {
+          state.guarantees[elem] = false;
+        }
         state.guarantees[action.payload.chosen] = true;
         state.chosenGuarantee = action.payload.price;
         state.totalCost = state.price + state.chosenGuarantee;
