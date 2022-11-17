@@ -3,7 +3,7 @@ import Accessories from '../../../assets/images/scooters/Accessories.png';
 import { HashLink } from 'react-router-hash-link';
 import categories from '../../../data/categories.json';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toggleModal, chooseItem } from '../../modal/modalSlice';
 
 import Slider from 'react-slick';
@@ -13,8 +13,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useMediaQuery } from 'react-responsive';
 
 function Categories() {
-  const html = document.querySelector('html');
-
   const dispatch = useDispatch();
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });

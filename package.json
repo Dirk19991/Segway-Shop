@@ -1,7 +1,7 @@
 {
   "name": "segway-shop",
   "version": "0.1.0",
-  "homepage": "https://Dirk19991.github.io/segway-shop",
+  "homepage": "https://Dirk19991.github.io/Segway-Shop",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
