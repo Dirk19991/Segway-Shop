@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .logo {
     padding: 0 20px;
   }

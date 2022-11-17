@@ -172,7 +172,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .image {
     display: none;
   }

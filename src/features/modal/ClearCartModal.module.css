@@ -1,5 +1,5 @@
 .options {
-  display: flex !important;
+  display: flex !important  ;
   justify-content: space-evenly !important;
   font-family: 'Proximanova' !important;
 }
