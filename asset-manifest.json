@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Segway-Shop/static/css/main.7f3282c0.css",
-    "main.js": "/Segway-Shop/static/js/main.96ef878e.js",
+    "main.css": "/Segway-Shop/static/css/main.03de30c7.css",
+    "main.js": "/Segway-Shop/static/js/main.899e9501.js",
     "static/media/bigImage.png": "/Segway-Shop/static/media/bigImage.b3e14e35df17904acb0e.png",
     "static/media/mediumImage.png": "/Segway-Shop/static/media/mediumImage.fdc61136c761782bbe53.png",
     "static/media/phone.png": "/Segway-Shop/static/media/phone.2d0ea31a28c45c0bb05d.png",
@@ -62,11 +62,11 @@
     "static/media/one.svg": "/Segway-Shop/static/media/one.76c573a12b14769f017ab41fd9ced333.svg",
     "static/media/charge.svg": "/Segway-Shop/static/media/charge.2c09b971bc4344f82d634dfbfa80fd5f.svg",
     "static/media/polygon.svg": "/Segway-Shop/static/media/polygon.66e1d451d50abd9124be.svg",
-    "main.7f3282c0.css.map": "/Segway-Shop/static/css/main.7f3282c0.css.map",
-    "main.96ef878e.js.map": "/Segway-Shop/static/js/main.96ef878e.js.map"
+    "main.03de30c7.css.map": "/Segway-Shop/static/css/main.03de30c7.css.map",
+    "main.899e9501.js.map": "/Segway-Shop/static/js/main.899e9501.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f3282c0.css",
-    "static/js/main.96ef878e.js"
+    "static/css/main.03de30c7.css",
+    "static/js/main.899e9501.js"
   ]
 }
