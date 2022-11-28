@@ -1,10 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+interface ClearCartModal {
+  open: boolean;
+}
+
+const initialState: ClearCartModal = {
+  open: false,
+};
+
 const clearCartModalSlice = createSlice({
   name: 'clearCartModal',
-  initialState: {
-    open: false,
-  },
+  initialState,
   reducers: {
     toggleModal(state, action) {
       state.open = action.payload;

@@ -24,7 +24,7 @@
   {
     "id": 3,
     "name": "KS Air T15",
-    "image": "KS_Air_T15",
+    "image": "KS_AIR_T15",
     "maxSpeed": "25 km/h",
     "maxDistance": "35km",
     "battery": "6000 mAh",

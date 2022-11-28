@@ -8,27 +8,57 @@ import { chooseGuarantee } from './featuredModelSlice';
 import featuredModel from '../../../data/featuredModel.json';
 import categories from '../../../data/categories.json';
 import { addToCart } from '../../cart/cartSlice';
+//@ts-ignore
 import PlusMinusButton from '../../common/PlusMinusButton';
 import { Link as RouterLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import { RootState } from '../../../app/store';
+
+export interface FeaturedModel {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+}
+
+export interface Category {
+  id: number;
+  name: string;
+  image: string;
+  maxSpeed: string;
+  maxDistance: string;
+  battery: string;
+  weight: string;
+  charge: string;
+  price: string;
+}
 
 function FeaturedScooter() {
-  const totalCost = useSelector((state) => state.featuredModel.totalCost);
-  const guarantees = useSelector((state) => state.featuredModel.guarantees);
-  const state = useSelector((state) => state.featuredModel);
-  const cart = useSelector((state) => state.cart);
+  const totalCost = useSelector(
+    (state: RootState) => state.featuredModel.totalCost
+  );
+  const guarantees = useSelector(
+    (state: RootState) => state.featuredModel.guarantees
+  );
+  const state = useSelector((state: RootState) => state.featuredModel);
+  const cart = useSelector((state: RootState) => state.cart);
+
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const dispatch = useDispatch();
 
   function chosenModel() {
     if (state.id) {
-      return featuredModel.find((elem) => elem.id === state.id);
+      return featuredModel.find((elem: FeaturedModel) => elem.id === state.id);
     } else {
-      return categories.find((elem) => elem.id === 6);
+      return categories.find((elem: Category) => elem.id === 6);
     }
   }
 
   const modelToAdd = chosenModel();
+
+  const quantityToAdd = cart.cart.find(
+    (item) => item.id === modelToAdd.id
+  )?.quantity;
 
   return (
     <div className={classes.wrapper}>
@@ -106,8 +136,7 @@ function FeaturedScooter() {
                 </button>
               </RouterLink>
 
-              {cart.cart.find((item) => item.id === modelToAdd.id)?.quantity >
-              0 ? (
+              {quantityToAdd !== undefined && quantityToAdd > 0 ? (
                 <PlusMinusButton
                   width={isMobile ? '140px' : '240px'}
                   height={isMobile ? '35px' : '48px'}

@@ -10,6 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { useDispatch } from 'react-redux';
 
 import featuresReducer from '../features/main/scooterFeatures/featuresSlice';
 import modalReducer from '../features/modal/modalSlice';
@@ -47,5 +48,10 @@ const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+export type RootState = ReturnType<typeof store.getState>;
+
+export type AppDispatch = typeof store.dispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch;
 
 export default store;
