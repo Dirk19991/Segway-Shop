@@ -8,7 +8,6 @@ import { chooseGuarantee } from './featuredModelSlice';
 import featuredModel from '../../../data/featuredModel.json';
 import categories from '../../../data/categories.json';
 import { addToCart } from '../../cart/cartSlice';
-//@ts-ignore
 import PlusMinusButton from '../../common/PlusMinusButton';
 import { Link as RouterLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';

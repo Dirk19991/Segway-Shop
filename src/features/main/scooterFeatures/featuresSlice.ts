@@ -7,7 +7,7 @@ interface Features {
   charge: boolean;
 }
 
-type ChosenFeature = 'delivery' | 'warranty' | 'support' | 'charge';
+export type ChosenFeature = 'delivery' | 'warranty' | 'support' | 'charge';
 
 const initialState: Features = {
   delivery: true,

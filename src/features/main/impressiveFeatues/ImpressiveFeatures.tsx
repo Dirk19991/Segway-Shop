@@ -1,13 +1,19 @@
 import classes from './ImpressiveFeatures.module.css';
 import impressiveFeatures from '../../../data/impressiveFeatures.json';
 
+interface ImpressiveFeaturesObject {
+  header: string;
+  description: string;
+  image: string;
+}
+
 function ImpressiveFeatures() {
   return (
     <div className={classes.wrapper}>
       <div className={classes.impressiveFeatures}>
         <div className={classes.mainHeader}>IMPRESSIVE FEATURES</div>
         <div className={classes.featuresBox}>
-          {impressiveFeatures.map((elem) => (
+          {impressiveFeatures.map((elem: ImpressiveFeaturesObject) => (
             <div key={elem.image} className={classes.feature}>
               <div className={classes.image}>
                 <img

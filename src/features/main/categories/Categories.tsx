@@ -2,7 +2,7 @@ import classes from './Categories.module.css';
 import Accessories from '../../../assets/images/scooters/Accessories.png';
 import { HashLink } from 'react-router-hash-link';
 import categories from '../../../data/categories.json';
-
+import { Category } from '../featuredScooter/FeaturedScooter';
 import { useDispatch } from 'react-redux';
 import { toggleModal, chooseItem } from '../../modal/modalSlice';
 
@@ -19,7 +19,7 @@ function Categories() {
 
   const categoriesJSX = (
     <>
-      {categories.map((elem) => (
+      {categories.map((elem: Category) => (
         <div key={elem.id} className={classes.item}>
           <div
             onClick={() => {
@@ -63,7 +63,7 @@ function Categories() {
     <>
       {isMobile ? (
         <Slider className={classes.slider} {...settings}>
-          {categories.map((elem) => (
+          {categories.map((elem: Category) => (
             <div className={classes.item}>
               <div
                 className={classes.sliderFlex}

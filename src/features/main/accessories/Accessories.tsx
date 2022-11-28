@@ -3,16 +3,31 @@ import accessories from '../../../data/accessories.json';
 import { addToCart } from '../../cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import PlusMinusButton from '../../common/PlusMinusButton';
+import { RootState } from '../../../app/store';
+
+interface Accessory {
+  id: number;
+  name: string;
+  name1: string;
+  name2: string;
+  description: string;
+  price: string;
+  image: string;
+}
 
 function Accessories() {
   const dispatch = useDispatch();
 
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart);
 
   return (
     <div className={classes.wrapper}>
       <div id='accessories' className={classes.accessories}>
-        {accessories.map((elem) => {
+        {accessories.map((elem: Accessory) => {
+          const quantityToAdd = cart.cart.find(
+            (item) => item.id === elem.id
+          )?.quantity;
+
           return (
             <div key={elem.id} className={classes.accessory}>
               <div className={classes.image}>
@@ -26,7 +41,7 @@ function Accessories() {
               <div className={classes.header2}>{elem.name2}</div>
               <div className={classes.description}>{elem.description}</div>
               <div className={classes.price}>{elem.price}</div>
-              {cart.cart.find((item) => item.id === elem.id)?.quantity > 0 ? (
+              {quantityToAdd !== undefined && quantityToAdd > 0 ? (
                 <PlusMinusButton
                   className={classes.plus}
                   elem={cart.cart.find((item) => item.id === elem.id)}

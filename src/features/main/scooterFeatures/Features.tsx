@@ -6,10 +6,13 @@ import support from '../../../assets/images/features/support.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeHighlight } from './featuresSlice';
 import FeatureText from './FeatureText';
+import { RootState } from '../../../app/store';
+import { ChosenFeature } from './featuresSlice';
 
 function Features() {
-  const highlightedFeature = useSelector((state) => {
-    for (let feature in state.features) {
+  const highlightedFeature = useSelector((state: RootState) => {
+    let feature: ChosenFeature;
+    for (feature in state.features) {
       if (state.features[feature] === true) {
         return feature;
       }

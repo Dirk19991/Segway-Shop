@@ -2,7 +2,11 @@ import { useRef } from 'react';
 import { IMaskInput } from 'react-imask';
 import classes from './InputMask.module.css';
 
-export function InputMask({ setInput }) {
+interface InputMaskProps {
+  setInput: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export function InputMask({ setInput }: InputMaskProps) {
   const ref = useRef(null);
   const inputRef = useRef(null);
 
@@ -23,7 +27,9 @@ export function InputMask({ setInput }) {
       ref={ref}
       inputRef={inputRef}
       placeholder='Enter number here'
-      onAccept={(mask, value) => setInput(mask.length)}
+      onAccept={(mask, value) => {
+        setInput(mask.length);
+      }}
     />
   );
 }

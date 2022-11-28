@@ -4,10 +4,13 @@ import fortyMiles from '../../../assets/images/features/fortyMiles.svg';
 import map from '../../../assets/images/features/map.svg';
 import one from '../../../assets/images/features/one.svg';
 import tools from '../../../assets/images/features/tools.svg';
+import { RootState } from '../../../app/store';
+import { ChosenFeature } from './featuresSlice';
 
 function FeatureText() {
-  const highlightedFeature = useSelector((state) => {
-    for (let feature in state.features) {
+  const highlightedFeature = useSelector((state: RootState) => {
+    let feature: ChosenFeature;
+    for (feature in state.features) {
       if (state.features[feature] === true) {
         return feature;
       }
@@ -58,7 +61,7 @@ function FeatureText() {
 
   const test = getIconStyles();
 
-  return (
+  return highlightedFeature ? (
     <div className={classes.wrapper}>
       <div className={classes.featureText}>
         <div className={classes.header}>
@@ -72,6 +75,8 @@ function FeatureText() {
         <img src={content[highlightedFeature].icon} alt='icon' />
       </div>
     </div>
+  ) : (
+    <div>Error</div>
   );
 }
 export default FeatureText;

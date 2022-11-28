@@ -5,12 +5,14 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../../cart/cartSlice';
 import PlusMinusButton from '../../common/PlusMinusButton';
+import { RootState } from '../../../app/store';
+import { Category } from '../featuredScooter/FeaturedScooter';
 
 function OtherModels() {
   const [input, setInput] = useState(0);
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(event) {
+  function handleSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
     if (input === 10) {
       setSent(true);
@@ -24,7 +26,7 @@ function OtherModels() {
 
   const dispatch = useDispatch();
 
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart);
 
   return (
     <div className={classes.wrapper}>
@@ -34,7 +36,11 @@ function OtherModels() {
           Check out the entire line of Segway scooters
         </div>
         <div className={classes.otherModelsGrid}>
-          {otherModels.map((elem) => {
+          {otherModels.map((elem: Category) => {
+            const quantityToAdd = cart.cart.find(
+              (item) => item.id === elem.id
+            )?.quantity;
+
             return (
               <div key={elem.id} className={classes.otherModel}>
                 <div className={classes.image}>
@@ -47,7 +53,7 @@ function OtherModels() {
                 <div className={classes.modelHeader}>{elem.name}</div>
                 <div className={classes.price}>{elem.price}</div>
 
-                {cart.cart.find((item) => item.id === elem.id)?.quantity > 0 ? (
+                {quantityToAdd !== undefined && quantityToAdd > 0 ? (
                   <PlusMinusButton
                     elem={cart.cart.find((item) => item.id === elem.id)}
                   />
