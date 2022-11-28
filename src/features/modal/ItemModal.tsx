@@ -9,13 +9,14 @@ import classes from './ItemModal.module.css';
 import { addToCart } from '../cart/cartSlice';
 import PlusMinusButton from '../common/PlusMinusButton';
 import { useMediaQuery } from 'react-responsive';
+import { RootState } from '../../app/store';
 
 export default function ItemModal() {
-  const open = useSelector((state) => state.modal.open);
-  const chosenItem = useSelector((state) => state.modal.chosenItem);
+  const open = useSelector((state: RootState) => state.modal.open);
+  const chosenItem = useSelector((state: RootState) => state.modal.chosenItem);
   const dispatch = useDispatch();
 
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state: RootState) => state.cart);
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
@@ -38,7 +39,11 @@ export default function ItemModal() {
     paddingRight: '0',
   };
 
-  return (
+  const quantityToAdd = cart.cart.find(
+    (item) => item.id === chosenItem?.id
+  )?.quantity;
+
+  return chosenItem ? (
     <div>
       <Modal
         aria-labelledby='transition-modal-title'
@@ -79,8 +84,7 @@ export default function ItemModal() {
               </div>
             </div>
 
-            {cart.cart.find((item) => item.id === chosenItem.id)?.quantity >
-            0 ? (
+            {quantityToAdd !== undefined && quantityToAdd > 0 ? (
               <PlusMinusButton
                 marginTop='23px'
                 height='39px'
@@ -98,5 +102,7 @@ export default function ItemModal() {
         </Fade>
       </Modal>
     </div>
+  ) : (
+    <div>Error</div>
   );
 }

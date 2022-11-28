@@ -7,10 +7,13 @@ import ScrollToTop from 'react-scroll-to-top';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { placeOrder } from '../features/cart/placeOrderSlice';
+import { RootState } from './store';
 
 function App() {
-  const open = useSelector((state) => state.modal.open);
-  const openClearCart = useSelector((state) => state.clearCartModal.open);
+  const open = useSelector((state: RootState) => state.modal.open);
+  const openClearCart = useSelector(
+    (state: RootState) => state.clearCartModal.open
+  );
   const html = document.querySelector('html');
   const dispatch = useDispatch();
 
@@ -21,8 +24,8 @@ function App() {
   }, [location, dispatch]);
 
   useEffect(() => {
-    open && (html.style.overflowY = 'hidden');
-    !open && (html.style.overflowY = 'unset');
+    open && (html!.style.overflowY = 'hidden');
+    !open && (html!.style.overflowY = 'unset');
   }, [open, html]);
 
   return (

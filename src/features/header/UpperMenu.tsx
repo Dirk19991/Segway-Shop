@@ -8,17 +8,20 @@ import { slide as Menu } from 'react-burger-menu';
 import { burgerStyles } from './burgerStyles';
 import { useMediaQuery } from 'react-responsive';
 import { toggleMenu } from './menuSlice';
+import { RootState } from '../../app/store';
 
 function UpperMenu() {
-  const numberOfItems = useSelector((state) =>
+  const numberOfItems = useSelector((state: RootState) =>
     state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
   );
 
-  const menuOpened = useSelector((state) => state.menuOpened.menuOpened);
+  const menuOpened = useSelector(
+    (state: RootState) => state.menuOpened.menuOpened
+  );
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
-  const scrollWithOffset = (el) => {
+  const scrollWithOffset = (el: HTMLElement) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -80;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });

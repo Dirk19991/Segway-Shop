@@ -9,7 +9,7 @@ export default function ScrollToTop() {
       top: 0,
       left: 0,
       behavior: 'instant',
-    });
+    } as any);
   }, [pathname]);
 
   return null;

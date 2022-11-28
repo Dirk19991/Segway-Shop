@@ -6,15 +6,18 @@ import PlusMinusButton from '../common/PlusMinusButton';
 import { useDispatch } from 'react-redux';
 import { clearCart } from './cartSlice';
 import { placeOrder } from './placeOrderSlice';
+import { RootState } from '../../app/store';
 
 function Cart() {
-  const cart = useSelector((state) => state.cart.cart);
-  const orderPlaced = useSelector((state) => state.placeOrder.orderPlaced);
+  const cart = useSelector((state: RootState) => state.cart.cart);
+  const orderPlaced = useSelector(
+    (state: RootState) => state.placeOrder.orderPlaced
+  );
   const numberOfItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   const total = cart
     .reduce(
-      (acc, elem) => acc + elem.price.replaceAll('$', '') * elem.quantity,
+      (acc, elem) => acc + +elem.price.replaceAll('$', '') * elem.quantity,
       0
     )
     .toFixed(2);

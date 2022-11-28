@@ -7,9 +7,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal } from '../cart/clearCartModalSlice';
 import classes from './ClearCartModal.module.css';
 import { clearCart } from '../cart/cartSlice';
+import { RootState } from '../../app/store';
 
 export default function ClearCartModal() {
-  const open = useSelector((state) => state.clearCartModal.open);
+  const open = useSelector((state: RootState) => state.clearCartModal.open);
 
   const dispatch = useDispatch();
   return (

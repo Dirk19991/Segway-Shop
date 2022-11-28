@@ -51,7 +51,7 @@ const cartSlice = createSlice({
         state.cart = state.cart.filter((elem, i) => i !== index);
       }
     },
-    clearCart(state, action) {
+    clearCart(state) {
       state.cart = [];
     },
   },
