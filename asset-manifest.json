@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Segway-Shop/static/css/main.03de30c7.css",
-    "main.js": "/Segway-Shop/static/js/main.899e9501.js",
+    "main.js": "/Segway-Shop/static/js/main.a908aef9.js",
     "static/media/bigImage.png": "/Segway-Shop/static/media/bigImage.b3e14e35df17904acb0e.png",
     "static/media/mediumImage.png": "/Segway-Shop/static/media/mediumImage.fdc61136c761782bbe53.png",
     "static/media/phone.png": "/Segway-Shop/static/media/phone.2d0ea31a28c45c0bb05d.png",
@@ -16,7 +16,7 @@
     "static/media/EKS_ZING_E10.png": "/Segway-Shop/static/media/EKS_ZING_E10.0e79d744f087321f4382.png",
     "static/media/EKS_ZING_E12.png": "/Segway-Shop/static/media/EKS_ZING_E12.df5afd9fef6341c4c783.png",
     "static/media/KS_MAX_Black.png": "/Segway-Shop/static/media/KS_MAX_Black.ff4a8a35f7fbc3b48acb.png",
-    "static/media/KS_Air_T15.png": "/Segway-Shop/static/media/KS_Air_T15.712d74adfc69a159514a.png",
+    "static/media/KS_AIR_T15.png": "/Segway-Shop/static/media/KS_AIR_T15.712d74adfc69a159514a.png",
     "static/media/KS_ES1L.png": "/Segway-Shop/static/media/KS_ES1L.5cbba2b4dd5a653a93ad.png",
     "static/media/KS_F30.png": "/Segway-Shop/static/media/KS_F30.f1f49c2f60a362bac76b.png",
     "static/media/leisure_backpack.png": "/Segway-Shop/static/media/leisure_backpack.a7839003820c0fb00106.png",
@@ -63,10 +63,10 @@
     "static/media/charge.svg": "/Segway-Shop/static/media/charge.2c09b971bc4344f82d634dfbfa80fd5f.svg",
     "static/media/polygon.svg": "/Segway-Shop/static/media/polygon.66e1d451d50abd9124be.svg",
     "main.03de30c7.css.map": "/Segway-Shop/static/css/main.03de30c7.css.map",
-    "main.899e9501.js.map": "/Segway-Shop/static/js/main.899e9501.js.map"
+    "main.a908aef9.js.map": "/Segway-Shop/static/js/main.a908aef9.js.map"
   },
   "entrypoints": [
     "static/css/main.03de30c7.css",
-    "static/js/main.899e9501.js"
+    "static/js/main.a908aef9.js"
   ]
 }
