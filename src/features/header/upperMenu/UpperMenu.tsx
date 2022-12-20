@@ -1,96 +1,52 @@
-import cart from '../../assets/icons/cart.svg';
-import instagram from '../../assets/icons/instagram.svg';
+import cart from '../../../assets/icons/cart.svg';
+import instagram from '../../../assets/icons/instagram.svg';
 import classes from './UpperMenu.module.css';
 import { Link as RouterLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { useSelector, useDispatch } from 'react-redux';
 import { slide as Menu } from 'react-burger-menu';
 import { burgerStyles } from './burgerStyles';
 import { useMediaQuery } from 'react-responsive';
 import { toggleMenu } from './menuSlice';
-import { RootState } from '../../app/store';
+import { useAppSelector, useAppDispatch } from '../../../app/store';
 
 function UpperMenu() {
-  const numberOfItems = useSelector((state: RootState) =>
+  const dispatch = useAppDispatch();
+
+  const numberOfItems = useAppSelector((state) =>
     state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
   );
 
-  const menuOpened = useSelector(
-    (state: RootState) => state.menuOpened.menuOpened
-  );
+  const menuOpened = useAppSelector((state) => state.menuOpened.menuOpened);
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
+  // учитывает высоту прикрепленного header
   const scrollWithOffset = (el: HTMLElement) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -80;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
-  const dispatch = useDispatch();
+  const tabNames = ['home', 'features', 'accessories', 'app', 'contacts'];
 
-  const links = (
-    <>
-      <li>
+  const links2 = tabNames.map((tab) => {
+    // features отстутствуют в мобильной версии - рендерим их только на десктоп
+    const shouldRender =
+      tab !== 'features' || (tab === 'features' && !isMobile);
+    return (
+      shouldRender && (
         <HashLink
           onClick={() => dispatch(toggleMenu(false))}
           className={classes.routerLink}
           smooth
-          to='/#home'
+          to={`/#${tab}`}
           scroll={(el) => scrollWithOffset(el)}
         >
-          HOME
+          {tab.toUpperCase()}
         </HashLink>
-      </li>
-      {isMobile ? (
-        ''
-      ) : (
-        <li>
-          <HashLink
-            className={classes.routerLink}
-            smooth
-            to='/#features'
-            scroll={(el) => scrollWithOffset(el)}
-          >
-            FEATURES
-          </HashLink>
-        </li>
-      )}
-      <li>
-        <HashLink
-          onClick={() => dispatch(toggleMenu(false))}
-          className={classes.routerLink}
-          smooth
-          to='/#accessories'
-          scroll={(el) => scrollWithOffset(el)}
-        >
-          ACCESSORIES
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          onClick={() => dispatch(toggleMenu(false))}
-          className={classes.routerLink}
-          smooth
-          to='/#app'
-          scroll={(el) => scrollWithOffset(el)}
-        >
-          APP
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          onClick={() => dispatch(toggleMenu(false))}
-          className={classes.routerLink}
-          smooth
-          to='/#contacts'
-          scroll={(el) => scrollWithOffset(el)}
-        >
-          CONTACTS
-        </HashLink>
-      </li>
-    </>
-  );
+      )
+    );
+  });
 
   return (
     <div className={classes.wrapper}>
@@ -104,10 +60,10 @@ function UpperMenu() {
               width={'200px'}
               styles={burgerStyles}
             >
-              {links}
+              {links2}
             </Menu>
           ) : (
-            links
+            links2
           )}
         </ul>
 

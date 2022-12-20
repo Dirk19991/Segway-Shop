@@ -1,5 +1,5 @@
-import segway from '../../assets/icons/segway.svg';
-import owner from '../../assets/images/owner.png';
+import segway from '../../../assets/icons/segway.svg';
+import owner from '../../../assets/images/owner.png';
 import classes from './Logo.module.css';
 import { Link as RouterLink } from 'react-router-dom';
 

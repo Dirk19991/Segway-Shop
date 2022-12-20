@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { useDispatch } from 'react-redux';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import featuresReducer from '../features/main/scooterFeatures/featuresSlice';
 import modalReducer from '../features/modal/modalSlice';
@@ -18,7 +18,7 @@ import cartReducer from '../features/cart/cartSlice';
 import featuredModelReducer from '../features/main/featuredScooter/featuredModelSlice';
 import clearCartModalReducer from '../features/cart/clearCartModalSlice';
 import placeOrderReducer from '../features/cart/placeOrderSlice';
-import menuReducer from '../features/header/menuSlice';
+import menuReducer from '../features/header/upperMenu/menuSlice';
 
 const rootReducer = combineReducers({
   features: featuresReducer,
@@ -53,5 +53,6 @@ export type RootState = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
 export default store;

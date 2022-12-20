@@ -1,5 +1,5 @@
-import UpperMenu from './UpperMenu';
-import Logo from './Logo';
+import UpperMenu from './upperMenu/UpperMenu';
+import Logo from './logo/Logo';
 
 function Header() {
   return (

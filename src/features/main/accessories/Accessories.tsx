@@ -1,9 +1,8 @@
 import classes from './Accessories.module.css';
 import accessories from '../../../data/accessories.json';
 import { addToCart } from '../../cart/cartSlice';
-import { useDispatch, useSelector } from 'react-redux';
 import PlusMinusButton from '../../common/PlusMinusButton';
-import { RootState } from '../../../app/store';
+import { useAppDispatch, useAppSelector } from '../../../app/store';
 
 interface Accessory {
   id: number;
@@ -16,9 +15,9 @@ interface Accessory {
 }
 
 function Accessories() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const cart = useSelector((state: RootState) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
 
   return (
     <div className={classes.wrapper}>
