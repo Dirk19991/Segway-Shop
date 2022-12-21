@@ -7,7 +7,7 @@ import ImpressiveFeatures from './impressiveFeatues/ImpressiveFeatures';
 import SmartPhoneControl from './smartphoneControl/SmartPhoneControl';
 import OtherModels from './popularModels/OtherModels';
 import Categories from './categories/Categories';
-import FreeShipping from './categories/FreeShipping';
+import FreeShipping from './categories/freeShipping/FreeShipping';
 import { useMediaQuery } from 'react-responsive';
 
 function Main() {

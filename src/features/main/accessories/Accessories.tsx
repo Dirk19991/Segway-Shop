@@ -19,6 +19,10 @@ function Accessories() {
 
   const cart = useAppSelector((state) => state.cart);
 
+  const handleAddToCart = (elem: Accessory) => {
+    dispatch(addToCart(elem));
+  };
+
   return (
     <div className={classes.wrapper}>
       <div id='accessories' className={classes.accessories}>
@@ -35,11 +39,11 @@ function Accessories() {
                   alt={elem.image}
                 ></img>
               </div>
-
               <div className={classes.header}>{elem.name1}</div>
               <div className={classes.header2}>{elem.name2}</div>
               <div className={classes.description}>{elem.description}</div>
               <div className={classes.price}>{elem.price}</div>
+
               {quantityToAdd !== undefined && quantityToAdd > 0 ? (
                 <PlusMinusButton
                   className={classes.plus}
@@ -47,7 +51,7 @@ function Accessories() {
                 />
               ) : (
                 <button
-                  onClick={() => dispatch(addToCart(elem))}
+                  onClick={() => handleAddToCart(elem)}
                   className={classes.button}
                 >
                   Add to cart

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface FeaturedModel {
+export interface FeaturedModel {
   price: number;
   guarantees: {
     low: boolean;
