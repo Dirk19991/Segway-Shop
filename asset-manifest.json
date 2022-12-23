@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Segway-Shop/static/css/main.03de30c7.css",
-    "main.js": "/Segway-Shop/static/js/main.a908aef9.js",
+    "main.css": "/Segway-Shop/static/css/main.bb7e31c7.css",
+    "main.js": "/Segway-Shop/static/js/main.c2c63c97.js",
     "static/media/bigImage.png": "/Segway-Shop/static/media/bigImage.b3e14e35df17904acb0e.png",
     "static/media/mediumImage.png": "/Segway-Shop/static/media/mediumImage.fdc61136c761782bbe53.png",
     "static/media/phone.png": "/Segway-Shop/static/media/phone.2d0ea31a28c45c0bb05d.png",
@@ -37,13 +37,13 @@
     "static/media/status.svg": "/Segway-Shop/static/media/status.745fbbc4777d18c24ede62b29125f563.svg",
     "static/media/settings.svg": "/Segway-Shop/static/media/settings.ed99fd2934b890ad917ccdbc8a120adb.svg",
     "static/media/training.svg": "/Segway-Shop/static/media/training.6cb0d4485aeef50275fae4aeb15515e4.svg",
-    "static/media/support.svg": "/Segway-Shop/static/media/support.e06cde4052f9c48d5eac2de1ce8df36a.svg",
-    "static/media/basicWarranty.svg": "/Segway-Shop/static/media/basicWarranty.e60fc917bb715d8774b2491fc677188c.svg",
+    "static/media/support.svg": "/Segway-Shop/static/media/support.e06cde4052f9c48d5eac.svg",
+    "static/media/warranty.svg": "/Segway-Shop/static/media/warranty.e60fc917bb715d8774b2.svg",
     "static/media/lightbulb.svg": "/Segway-Shop/static/media/lightbulb.246c2764a51f53ce439f.svg",
     "static/media/tools.svg": "/Segway-Shop/static/media/tools.36523b43f6efc28e223977381028bdab.svg",
     "static/media/instagram.svg": "/Segway-Shop/static/media/instagram.e3f4c89f12bf9eca503a6f1a9650b21c.svg",
     "static/media/fortyMiles.svg": "/Segway-Shop/static/media/fortyMiles.1fecf3d88787c7d84e9089e7fdb2bd2b.svg",
-    "static/media/delivery.svg": "/Segway-Shop/static/media/delivery.0b2b73032e012a61bef250e6b14d61f4.svg",
+    "static/media/delivery.svg": "/Segway-Shop/static/media/delivery.0b2b73032e012a61bef2.svg",
     "static/media/antiTheft.svg": "/Segway-Shop/static/media/antiTheft.8d866b858767ede979422e9d9abdbc2b.svg",
     "static/media/firmware.svg": "/Segway-Shop/static/media/firmware.0e7d1dfcdea1536a7f591353860a2611.svg",
     "static/media/slick.svg": "/Segway-Shop/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -60,13 +60,13 @@
     "static/media/hill_grade.svg": "/Segway-Shop/static/media/hill_grade.ccc5d66a03b9b7fdde3d.svg",
     "index.html": "/Segway-Shop/index.html",
     "static/media/one.svg": "/Segway-Shop/static/media/one.76c573a12b14769f017ab41fd9ced333.svg",
-    "static/media/charge.svg": "/Segway-Shop/static/media/charge.2c09b971bc4344f82d634dfbfa80fd5f.svg",
+    "static/media/charge.svg": "/Segway-Shop/static/media/charge.2c09b971bc4344f82d63.svg",
     "static/media/polygon.svg": "/Segway-Shop/static/media/polygon.66e1d451d50abd9124be.svg",
-    "main.03de30c7.css.map": "/Segway-Shop/static/css/main.03de30c7.css.map",
-    "main.a908aef9.js.map": "/Segway-Shop/static/js/main.a908aef9.js.map"
+    "main.bb7e31c7.css.map": "/Segway-Shop/static/css/main.bb7e31c7.css.map",
+    "main.c2c63c97.js.map": "/Segway-Shop/static/js/main.c2c63c97.js.map"
   },
   "entrypoints": [
-    "static/css/main.03de30c7.css",
-    "static/js/main.a908aef9.js"
+    "static/css/main.bb7e31c7.css",
+    "static/js/main.c2c63c97.js"
   ]
 }
