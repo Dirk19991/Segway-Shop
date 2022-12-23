@@ -1,7 +1,7 @@
 import classes from './FeaturedScooter.module.css';
 import bigScooter from '../../../assets/images/scooters/bigScooter.png';
 import { addToCart } from '../../cart/cartSlice';
-import PlusMinusButton from '../../common/PlusMinusButton';
+import PlusMinusButton from '../../../components/PlusMinusButton';
 import { Link as RouterLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { useAppDispatch, useAppSelector } from '../../../app/store';

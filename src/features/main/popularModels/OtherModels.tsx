@@ -1,12 +1,10 @@
 import classes from './OtherModels.module.css';
 import otherModels from '../../../data/otherModels.json';
-import { InputMask } from './InputMask';
+import { InputMask } from './inputMask/InputMask';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../../cart/cartSlice';
-import PlusMinusButton from '../../common/PlusMinusButton';
-import { RootState } from '../../../app/store';
+import { useAppSelector } from '../../../app/store';
 import { Category } from '../featuredScooter/FeaturedScooter';
+import OtherModel from './otherModel/OtherModel';
 
 function OtherModels() {
   const [input, setInput] = useState(0);
@@ -24,9 +22,7 @@ function OtherModels() {
     }
   }
 
-  const dispatch = useDispatch();
-
-  const cart = useSelector((state: RootState) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
 
   return (
     <div className={classes.wrapper}>
@@ -41,32 +37,7 @@ function OtherModels() {
               (item) => item.id === elem.id
             )?.quantity;
 
-            return (
-              <div key={elem.id} className={classes.otherModel}>
-                <div className={classes.image}>
-                  <img
-                    src={require(`../../../assets/images/otherModels/${elem.image}.png`)}
-                    alt={elem.image}
-                  ></img>
-                </div>
-
-                <div className={classes.modelHeader}>{elem.name}</div>
-                <div className={classes.price}>{elem.price}</div>
-
-                {quantityToAdd !== undefined && quantityToAdd > 0 ? (
-                  <PlusMinusButton
-                    elem={cart.cart.find((item) => item.id === elem.id)}
-                  />
-                ) : (
-                  <button
-                    onClick={() => dispatch(addToCart(elem))}
-                    className={classes.button}
-                  >
-                    Add to cart
-                  </button>
-                )}
-              </div>
-            );
+            return <OtherModel quantityToAdd={quantityToAdd} elem={elem} />;
           })}
           <div className={classes.otherModel}>
             <div className={classes.modelHeader}>DIDN'T FIND A MODEL?</div>

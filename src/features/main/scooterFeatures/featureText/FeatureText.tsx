@@ -1,14 +1,13 @@
-import { useSelector } from 'react-redux';
 import classes from './FeatureText.module.css';
-import fortyMiles from '../../../assets/images/features/fortyMiles.svg';
-import map from '../../../assets/images/features/map.svg';
-import one from '../../../assets/images/features/one.svg';
-import tools from '../../../assets/images/features/tools.svg';
-import { RootState } from '../../../app/store';
-import { ChosenFeature } from './featuresSlice';
+import fortyMiles from '../../../../assets/images/features/fortyMiles.svg';
+import map from '../../../../assets/images/features/map.svg';
+import one from '../../../../assets/images/features/one.svg';
+import tools from '../../../../assets/images/features/tools.svg';
+import { ChosenFeature } from '../featuresSlice';
+import { useAppSelector } from '../../../../app/store';
 
 function FeatureText() {
-  const highlightedFeature = useSelector((state: RootState) => {
+  const highlightedFeature = useAppSelector((state) => {
     let feature: ChosenFeature;
     for (feature in state.features) {
       if (state.features[feature] === true) {
@@ -59,7 +58,7 @@ function FeatureText() {
     }
   }
 
-  const test = getIconStyles();
+  const iconStyles = getIconStyles();
 
   return highlightedFeature ? (
     <div className={classes.wrapper}>
@@ -71,7 +70,7 @@ function FeatureText() {
           {content[highlightedFeature].text}
         </div>
       </div>
-      <div className={test}>
+      <div className={iconStyles}>
         <img src={content[highlightedFeature].icon} alt='icon' />
       </div>
     </div>

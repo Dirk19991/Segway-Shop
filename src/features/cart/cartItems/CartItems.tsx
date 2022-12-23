@@ -1,6 +1,6 @@
 import classes from '../Cart.module.css';
 import { useAppSelector } from '../../../app/store';
-import PlusMinusButton from '../../common/PlusMinusButton';
+import PlusMinusButton from '../../../components/PlusMinusButton';
 
 function CartItems() {
   const cart = useAppSelector((state) => state.cart.cart);

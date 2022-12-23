@@ -17,20 +17,19 @@ function SmartPhoneControl() {
     { icon: training, description: 'Training program' },
   ];
 
+  //описание разделено на два блока, чтобы последняя фраза всегда была по центру внизу
+  const mainDescription =
+    "You can easily control your Segway electric scooter with your smartphone via Bluetooth. Not being the key to the kickscooter, it will give a signal in case of an attempt to steal. Check the current speed, data on the status of the device's systems or set the speed limit with a few touches.";
+
+  const subDescription =
+    'And the skating training program is indispensable for beginners.';
+
   return (
     <div className={classes.wrapper}>
       <div id='app' className={classes.smartPhoneControl}>
         <div className={classes.header}>Control from your smartphone</div>
-        <div className={classes.description}>
-          You can easily control your Segway electric scooter with your
-          smartphone via Bluetooth. Not being the key to the kickscooter, it
-          will give a signal in case of an attempt to steal. Check the current
-          speed, data on the status of the device's systems or set the speed
-          limit with a few touches.
-        </div>
-        <div className={classes.description}>
-          And the skating training program is indispensable for beginners.
-        </div>
+        <div className={classes.description}>{mainDescription}</div>
+        <div className={classes.description}>{subDescription}</div>
         <div className={classes.main}>
           <div className={classes.iconsDownload}>
             <div className={classes.icons}>

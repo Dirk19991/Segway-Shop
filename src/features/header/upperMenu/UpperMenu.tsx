@@ -1,20 +1,14 @@
-import cart from '../../../assets/icons/cart.svg';
-import instagram from '../../../assets/icons/instagram.svg';
 import classes from './UpperMenu.module.css';
-import { Link as RouterLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { slide as Menu } from 'react-burger-menu';
 import { burgerStyles } from './burgerStyles';
 import { useMediaQuery } from 'react-responsive';
 import { toggleMenu } from './menuSlice';
 import { useAppSelector, useAppDispatch } from '../../../app/store';
+import IconsPhone from './iconsPhone/IconsPhone';
 
 function UpperMenu() {
   const dispatch = useAppDispatch();
-
-  const numberOfItems = useAppSelector((state) =>
-    state.cart.cart.reduce((acc, item) => acc + item.quantity, 0)
-  );
 
   const menuOpened = useAppSelector((state) => state.menuOpened.menuOpened);
 
@@ -29,13 +23,14 @@ function UpperMenu() {
 
   const tabNames = ['home', 'features', 'accessories', 'app', 'contacts'];
 
-  const links2 = tabNames.map((tab) => {
+  const links = tabNames.map((tab) => {
     // features отстутствуют в мобильной версии - рендерим их только на десктоп
     const shouldRender =
       tab !== 'features' || (tab === 'features' && !isMobile);
     return (
       shouldRender && (
         <HashLink
+          key={tab}
           onClick={() => dispatch(toggleMenu(false))}
           className={classes.routerLink}
           smooth
@@ -60,31 +55,13 @@ function UpperMenu() {
               width={'200px'}
               styles={burgerStyles}
             >
-              {links2}
+              {links}
             </Menu>
           ) : (
-            links2
+            links
           )}
         </ul>
-
-        <ul>
-          <li>
-            <RouterLink
-              className={classes.cart}
-              data-number={numberOfItems}
-              to='cart'
-            >
-              <img src={cart} alt='cart'></img>
-            </RouterLink>
-          </li>
-
-          <li>
-            <a className={classes.instagram} href='http://instagram.com'>
-              <img src={instagram} alt='instagram'></img>
-            </a>
-          </li>
-          <li>+1 (888) 888-88-88</li>
-        </ul>
+        <IconsPhone />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from './modalSlice';
 import classes from './ItemModal.module.css';
 import { addToCart } from '../cart/cartSlice';
-import PlusMinusButton from '../common/PlusMinusButton';
+import PlusMinusButton from '../../components/PlusMinusButton';
 import { useMediaQuery } from 'react-responsive';
 import { RootState } from '../../app/store';
 

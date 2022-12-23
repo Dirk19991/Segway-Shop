@@ -1,15 +1,17 @@
 import classes from './Cart.module.css';
-import { useSelector } from 'react-redux';
 import scooter from '../../assets/images/undraw_scooter.svg';
-import { RootState } from '../../app/store';
+import { useAppSelector } from '../../app/store';
 import CartItems from './cartItems/CartItems';
 import TotalCart from './totalCart/TotalCart';
 
 function Cart() {
-  const cart = useSelector((state: RootState) => state.cart.cart);
-  const orderPlaced = useSelector(
-    (state: RootState) => state.placeOrder.orderPlaced
-  );
+  const cart = useAppSelector((state) => state.cart.cart);
+
+  // в зависимости от того, купил ли пользователь что-то,
+  // рендерим сообщение "The order was placed!" или ничего
+  const orderPlaced = useAppSelector((state) => state.placeOrder.orderPlaced);
+
+  // если в корзине нет товаров, рендерим картинку и "Your cart is currently empty"
   const numberOfItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (

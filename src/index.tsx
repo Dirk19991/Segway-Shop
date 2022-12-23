@@ -8,7 +8,7 @@ import Footer from './features/footer/Footer';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
-import ScrollToTop from './features/common/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 
 const router = createHashRouter([
   {

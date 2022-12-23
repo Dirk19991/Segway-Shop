@@ -1,32 +1,23 @@
 import Header from '../features/header/Header';
 import ItemModal from '../features/modal/ItemModal';
 import ClearCartModal from '../features/modal/ClearCartModal';
-import { useSelector } from 'react-redux';
 import { Outlet, useLocation } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { placeOrder } from '../features/cart/placeOrderSlice';
-import { RootState } from './store';
+import { useAppDispatch, useAppSelector } from './store';
 
 function App() {
-  const open = useSelector((state: RootState) => state.modal.open);
-  const openClearCart = useSelector(
-    (state: RootState) => state.clearCartModal.open
-  );
-  const html = document.querySelector('html');
-  const dispatch = useDispatch();
+  const open = useAppSelector((state) => state.modal.open);
+  const openClearCart = useAppSelector((state) => state.clearCartModal.open);
+  const dispatch = useAppDispatch();
 
   let location = useLocation();
 
+  // убираем надпись "The order was placed" если покупатель ушел со страницы заказа
   useEffect(() => {
     dispatch(placeOrder(false));
   }, [location, dispatch]);
-
-  useEffect(() => {
-    open && (html!.style.overflowY = 'hidden');
-    !open && (html!.style.overflowY = 'unset');
-  }, [open, html]);
 
   return (
     <>

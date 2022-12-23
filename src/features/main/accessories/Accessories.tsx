@@ -1,7 +1,7 @@
 import classes from './Accessories.module.css';
 import accessories from '../../../data/accessories.json';
 import { addToCart } from '../../cart/cartSlice';
-import PlusMinusButton from '../../common/PlusMinusButton';
+import PlusMinusButton from '../../../components/PlusMinusButton';
 import { useAppDispatch, useAppSelector } from '../../../app/store';
 
 interface Accessory {
