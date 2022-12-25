@@ -62,6 +62,14 @@ function FeatureText() {
 
   return highlightedFeature ? (
     <div className={classes.wrapper}>
+      {/* подгружаем картинки заранее, иначе были проблемы с анимацией. Делаем
+      //этот блок невидимым */}
+      <div className={classes.preload}>
+        <img src={map} alt='icon' />
+        <img src={one} alt='icon' />
+        <img src={tools} alt='icon' />
+        <img src={fortyMiles} alt='icon' />
+      </div>
       <div className={classes.featureText}>
         <div className={classes.header}>
           {content[highlightedFeature].header}
