@@ -12,7 +12,7 @@ export interface FeaturedModel {
   id: null | number;
 }
 
-type Chosen = 'low' | 'middle' | 'high';
+export type Chosen = 'low' | 'middle' | 'high';
 
 interface ChosenGuarantee {
   price: number;

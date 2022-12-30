@@ -37,7 +37,13 @@ function OtherModels() {
               (item) => item.id === elem.id
             )?.quantity;
 
-            return <OtherModel quantityToAdd={quantityToAdd} elem={elem} />;
+            return (
+              <OtherModel
+                key={elem.id}
+                quantityToAdd={quantityToAdd}
+                elem={elem}
+              />
+            );
           })}
           <div className={classes.otherModel}>
             <div className={classes.modelHeader}>DIDN'T FIND A MODEL?</div>

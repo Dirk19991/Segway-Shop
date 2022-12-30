@@ -22,6 +22,7 @@ function Features() {
         <div id='features' className={classes.featuresList}>
           {featureNames.map((featureName, index) => (
             <FeatureButton
+              key={featureName}
               name={featureName}
               text={featureDescriptions[index]}
             />
