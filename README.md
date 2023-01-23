@@ -7,7 +7,7 @@
 
 ## Стек
 
-[![My Skills](https://skillicons.dev/icons?i=react,redux,js,figma)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,redux,ts,figma)](https://skillicons.dev)
 
 \+ Material UI, React Router 6, библиотеки react-burger-menu, react-responsive, slick-carousel
 
