@@ -15,15 +15,15 @@ function IconsPhone() {
         <RouterLink
           className={classes.cart}
           data-number={numberOfItems}
-          to='cart'
+          to="cart"
         >
-          <img src={cart} alt='cart'></img>
+          <img src={cart} alt="cart"></img>
         </RouterLink>
       </li>
 
       <li>
-        <a className={classes.instagram} href='http://instagram.com'>
-          <img src={instagram} alt='instagram'></img>
+        <a className={classes.instagram} href="http://instagram.com">
+          <img src={instagram} alt="instagram"></img>
         </a>
       </li>
       <li>+1 (888) 888-88-88</li>

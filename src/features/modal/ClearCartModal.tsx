@@ -3,16 +3,15 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
-import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal } from '../cart/clearCartModalSlice';
 import classes from './ClearCartModal.module.css';
 import { clearCart } from '../cart/cartSlice';
-import { RootState } from '../../app/store';
+import { useAppDispatch, useAppSelector } from '../../app/store';
 
 export default function ClearCartModal() {
-  const open = useSelector((state: RootState) => state.clearCartModal.open);
+  const open = useAppSelector((state) => state.clearCartModal.open);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   return (
     <div>
       <Dialog

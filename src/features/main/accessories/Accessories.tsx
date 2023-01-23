@@ -4,7 +4,7 @@ import { addToCart } from '../../cart/cartSlice';
 import PlusMinusButton from '../../../components/PlusMinusButton';
 import { useAppDispatch, useAppSelector } from '../../../app/store';
 
-interface Accessory {
+export interface Accessory {
   id: number;
   name: string;
   name1: string;

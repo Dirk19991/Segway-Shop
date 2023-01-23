@@ -33,7 +33,7 @@ function Cart() {
         <CartItems />
         {numberOfItems === 0 && (
           <div className={classes.scooterImage}>
-            <img src={scooter} alt='scooter' />
+            <img src={scooter} alt="scooter" />
           </div>
         )}
         {numberOfItems > 0 && <TotalCart />}

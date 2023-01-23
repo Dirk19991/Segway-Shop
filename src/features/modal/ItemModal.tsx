@@ -3,20 +3,19 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal } from './modalSlice';
 import classes from './ItemModal.module.css';
 import { addToCart } from '../cart/cartSlice';
 import PlusMinusButton from '../../components/PlusMinusButton';
 import { useMediaQuery } from 'react-responsive';
-import { RootState } from '../../app/store';
+import { useAppDispatch, useAppSelector } from '../../app/store';
 
 export default function ItemModal() {
-  const open = useSelector((state: RootState) => state.modal.open);
-  const chosenItem = useSelector((state: RootState) => state.modal.chosenItem);
-  const dispatch = useDispatch();
+  const open = useAppSelector((state) => state.modal.open);
+  const chosenItem = useAppSelector((state) => state.modal.chosenItem);
+  const dispatch = useAppDispatch();
 
-  const cart = useSelector((state: RootState) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
 
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 

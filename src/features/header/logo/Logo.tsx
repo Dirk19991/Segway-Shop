@@ -6,20 +6,20 @@ import { Link as RouterLink } from 'react-router-dom';
 function Logo() {
   return (
     <div className={classes.wrapper}>
-      <div id='home' className={classes.logo}>
-        <RouterLink className={classes.routerLink} to='/'>
+      <div id="home" className={classes.logo}>
+        <RouterLink className={classes.routerLink} to="/">
           <div>
-            <img className={classes.image} src={segway} alt='segway' />
+            <img className={classes.image} src={segway} alt="segway" />
           </div>
         </RouterLink>
         <div className={classes.owner}>
           <div>
-            <img src={owner} alt='owner' />
+            <img src={owner} alt="owner" />
           </div>
           <div className={classes.ownerTextWrapper}>
             <div className={classes.header}>JOHN SMITH</div>
             <div className={classes.text}>
-              <a href='mailto:email@example.com'>
+              <a href="mailto:email@example.com">
                 ask the director <br></br>a question
               </a>
             </div>

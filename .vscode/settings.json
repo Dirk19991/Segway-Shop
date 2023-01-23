@@ -1,3 +1,4 @@
 {
-  "reactSnippets.settings.importReactOnTop": false
+  "reactSnippets.settings.importReactOnTop": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }

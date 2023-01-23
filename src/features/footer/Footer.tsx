@@ -4,9 +4,9 @@ import segway from '../../assets/icons/segway.svg';
 function Footer() {
   return (
     <div className={classes.wrapper}>
-      <div id='contacts' className={classes.footer}>
+      <div id="contacts" className={classes.footer}>
         <div className={classes.logo}>
-          <img src={segway} alt='segway' />
+          <img src={segway} alt="segway" />
         </div>
         <div className={classes.contacts}>
           <div>+1 (888) 888-88-88</div>

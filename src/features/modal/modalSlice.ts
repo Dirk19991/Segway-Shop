@@ -1,20 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
-
-interface ChosenItem {
-  id: number;
-  name: string;
-  image: string;
-  maxSpeed: string;
-  maxDistance: string;
-  battery: string;
-  weight: string;
-  charge: string;
-  price: string;
-}
+import { Category } from './../main/featuredScooter/FeaturedScooter';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Modal {
   open: boolean;
-  chosenItem: null | ChosenItem;
+  chosenItem: null | Category;
 }
 
 const initialState: Modal = {
@@ -26,10 +15,10 @@ const modalSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    toggleModal(state, action) {
+    toggleModal(state, action: PayloadAction<boolean>) {
       state.open = action.payload;
     },
-    chooseItem(state, action) {
+    chooseItem(state, action: PayloadAction<Category>) {
       state.chosenItem = action.payload;
     },
   },

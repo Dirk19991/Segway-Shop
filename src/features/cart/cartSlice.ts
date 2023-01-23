@@ -1,4 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { Category } from './../main/featuredScooter/FeaturedScooter';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Accessory } from '../main/accessories/Accessories';
 
 export interface CartItem {
   id: number;
@@ -20,7 +22,7 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addToCart(state, action) {
+    addToCart(state, action: PayloadAction<CartItem | Category | Accessory>) {
       const itemInCart = state.cart?.find(
         (item) => item.id === action.payload.id
       );
@@ -37,7 +39,10 @@ const cartSlice = createSlice({
         });
       }
     },
-    decreaseItems(state, action) {
+    decreaseItems(
+      state,
+      action: PayloadAction<CartItem | Category | Accessory>
+    ) {
       const itemInCart = state.cart?.find(
         (item) => item.id === action.payload.id
       );

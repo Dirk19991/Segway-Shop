@@ -1,7 +1,6 @@
 import bigImage from './../../../assets/images/bigImage.png';
 import mediumImage from './../../../assets/images/mediumImage.png';
 import classes from './BigImage.module.css';
-import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 function BigImage() {

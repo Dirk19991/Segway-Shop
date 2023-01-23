@@ -1,9 +1,9 @@
 import classes from './PlusMinusButton.module.css';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { useDispatch } from 'react-redux';
 import { addToCart, decreaseItems } from '../features/cart/cartSlice';
 import { CartItem } from '../features/cart/cartSlice';
+import { useAppDispatch } from '../app/store';
 
 interface PlusMinusButtonProps {
   className?: string;
@@ -21,7 +21,22 @@ function PlusMinusButton({
   marginTop,
   justifyContent,
 }: PlusMinusButtonProps) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
+  const addToCartHandler = (elem: CartItem | undefined) => {
+    if (!elem) {
+      return;
+    }
+    dispatch(addToCart(elem));
+  };
+
+  const removeItemsHandler = (elem: CartItem | undefined) => {
+    if (!elem) {
+      return;
+    }
+    dispatch(decreaseItems(elem));
+  };
+
   return (
     <div>
       <div
@@ -34,12 +49,12 @@ function PlusMinusButton({
         className={classes.button}
       >
         <RemoveIcon
-          onClick={() => dispatch(decreaseItems(elem))}
+          onClick={() => removeItemsHandler(elem)}
           className={classes.minus}
         />
         <div className={classes.quantity}>{elem?.quantity}</div>
         <AddIcon
-          onClick={() => dispatch(addToCart(elem))}
+          onClick={() => addToCartHandler(elem)}
           className={classes.plus}
         />
       </div>
